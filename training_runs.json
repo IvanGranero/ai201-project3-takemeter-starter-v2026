@@ -1,0 +1,94 @@
+{
+  "base_model": "distilbert-base-uncased",
+  "seed": 42,
+  "learning_rate": 2e-05,
+  "batch_size": 16,
+  "max_length": 128,
+  "split_sizes": {
+    "train": 2221,
+    "validation": 477,
+    "test": 477
+  },
+  "runs": [
+    {
+      "name": "base_3_epochs",
+      "epochs": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "training_loss": 0.8677,
+          "validation_loss": 0.888156,
+          "accuracy": 0.631027,
+          "f1_macro": 0.346474
+        },
+        {
+          "epoch": 2,
+          "training_loss": 0.8187,
+          "validation_loss": 0.818471,
+          "accuracy": 0.675052,
+          "f1_macro": 0.516893
+        },
+        {
+          "epoch": 3,
+          "training_loss": 0.7015,
+          "validation_loss": 0.811576,
+          "accuracy": 0.66457,
+          "f1_macro": 0.523919
+        }
+      ]
+    },
+    {
+      "name": "extended_6_epochs",
+      "epochs": 6,
+      "changed_hyperparameter": {
+        "name": "epochs",
+        "from": 3,
+        "to": 6
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "training_loss": 0.8558,
+          "validation_loss": 0.878345,
+          "accuracy": 0.633124,
+          "f1_macro": 0.347926
+        },
+        {
+          "epoch": 2,
+          "training_loss": 0.8072,
+          "validation_loss": 0.808116,
+          "accuracy": 0.672956,
+          "f1_macro": 0.548618
+        },
+        {
+          "epoch": 3,
+          "training_loss": 0.6814,
+          "validation_loss": 0.800203,
+          "accuracy": 0.675052,
+          "f1_macro": 0.593533
+        },
+        {
+          "epoch": 4,
+          "training_loss": 0.6659,
+          "validation_loss": 0.802945,
+          "accuracy": 0.672956,
+          "f1_macro": 0.609411
+        },
+        {
+          "epoch": 5,
+          "training_loss": 0.5519,
+          "validation_loss": 0.834772,
+          "accuracy": 0.67086,
+          "f1_macro": 0.587709
+        },
+        {
+          "epoch": 6,
+          "training_loss": 0.4881,
+          "validation_loss": 0.843396,
+          "accuracy": 0.677149,
+          "f1_macro": 0.607847
+        }
+      ]
+    }
+  ]
+}

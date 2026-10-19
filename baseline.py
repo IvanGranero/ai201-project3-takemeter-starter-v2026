@@ -76,8 +76,29 @@ def load_definitions(path):
         if not line or line.startswith("#") or ":" not in line:
             continue
         label, definition = line.split(":", 1)
-        definitions[label.strip()] = definition.strip()
+        label = label.strip()
+        if label in definitions:
+            raise ValueError(f"duplicate definition for label {label!r} in {path}")
+        definitions[label] = definition.strip()
     return definitions
+
+
+def validate_definitions(labels, definitions, path):
+    """Reject a non-empty definitions file that disagrees with the dataset."""
+    if not definitions:
+        return
+
+    expected = set(labels)
+    actual = set(definitions)
+    missing = sorted(expected - actual)
+    extra = sorted(actual - expected)
+    if missing or extra:
+        problems = []
+        if missing:
+            problems.append(f"missing definitions for: {', '.join(missing)}")
+        if extra:
+            problems.append(f"definitions for unknown labels: {', '.join(extra)}")
+        raise ValueError(f"{path} does not match the dataset labels ({'; '.join(problems)})")
 
 
 def classify(texts, labels, definitions=None, quiet=False):
@@ -220,7 +241,11 @@ def main():
             sys.exit(1)
 
     labels = sorted(df["label"].dropna().astype(str).str.strip().unique())
-    definitions = load_definitions(args.definitions)
+    try:
+        definitions = load_definitions(args.definitions)
+        validate_definitions(labels, definitions, args.definitions)
+    except ValueError as error:
+        parser.error(str(error))
 
     if definitions:
         print(f"Using your definitions from {args.definitions}.")

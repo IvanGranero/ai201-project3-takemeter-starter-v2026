@@ -47,63 +47,46 @@ This project trains a DistilBERT text classifier to predict the CVSS severity of
 
 ## Label Taxonomy
 
-<!-- Each label: a one-sentence definition and two real examples from your
-     reading. Then your decision rule for the hardest boundary.
+<!-- Each label has a definition and two examples from the labeled CVE records. -->
 
-     The decision rule is worth a point on its own and it's the thing most
-     people leave out. Every taxonomy has a hardest boundary. Name yours. -->
+### `LOW`
 
-### `label_one`
-LOW
-**Definition:**
-Vulnerabilities with limited security impact, requiring significant constraints or resulting in minimal compromise of confidentiality, integrity, or availability.
-**Example 1:**
->Use after free in gpu in google chrome prior to allowed a remote attacker who had compromised the renderer process to perform an out of bounds memory write via a crafted html page.
-**Example 2:**
->CVEs in the dataset labeled with CVSS severity LOW, typically involving limited impact or highly constrained exploitation conditions.
+**Definition:** Vulnerabilities with comparatively limited impact or constrained exploitation conditions.
 
-### `label_two`
-MEDIUM
-**Definition:**
-Vulnerabilities that present a meaningful security risk but usually require user interaction, specific conditions, or provide only partial impact.
-**Example 1:**
->A use-after-free issue was addressed with improved memory management. This issue is fixed in iOS and iPadOS ...
-**Example 2:**
->This issue was addressed with additional entitlement checks. An app may be able to circumvent app restrictions...
+**Examples:**
+- `CVE-2026-11251`: “insufficient policy enforcement in password manager ... allowed a remote attacker who had compromised the renderer process to bypass discretionary access control”
+- `CVE-2026-11240`: “insufficient validation of untrusted input in loader ... allowed a remote attacker who had compromised the renderer process to bypass site isolation”
 
-### `label_three`
-HIGH
-**Definition:**
-Vulnerabilities that can significantly impact confidentiality, integrity, or availability and are often remotely exploitable.
-**Example 1:**
->Use-after-free in the DOM: Networking component. This vulnerability was fixed in Firefox ...
-**Example 2:**
->Integer overflow in the audio/video component. This vulnerability was fixed in Firefox 148...
+### `MEDIUM`
 
-### `label_four`
-CRITICAL
-**Definition:**
-Vulnerabilities that can lead to severe compromise of a system, such as remote code execution, sandbox escape, or full system takeover.
-**Example 1:**
->Use-after-free in the JavaScript engine component. This vulnerability was fixed in Firefox 148...
-**Example 2:**
->Sandbox escape due to incorrect boundary conditions in the telemetry component in external software...
+**Definition:** Vulnerabilities that create a meaningful security risk, but whose impact or exploitability is more constrained than HIGH or CRITICAL.
+
+**Examples:**
+- `CVE-2026-5146`: “improper access control in the notification management endpoints ... allows an unauthenticated attacker to modify or delete arbitrary user notification records”
+- `CVE-2026-5900`: “policy bypass in downloads ... allowed a remote attacker to bypass ... multi-download protections”
+
+### `HIGH`
+
+**Definition:** Serious vulnerabilities with substantial impact, such as remotely triggered memory corruption or code execution, but below the CRITICAL CVSS severity band.
+
+**Examples:**
+- `CVE-2026-5915`: “insufficient validation of untrusted input in webml ... allowed a remote attacker to perform an out of bounds memory write”
+- `CVE-2026-5883`: “use after free in media in google chrome ... allowed a remote attacker to execute arbitrary code inside a sandbox”
+
+### `CRITICAL`
+
+**Definition:** The highest severity category, for vulnerabilities with the potential for especially severe compromise, including sandbox escape or bypass of core security controls.
+
+**Examples:**
+- `CVE-2026-11061`: “type confusion in angle ... allowed a remote attacker to potentially perform a sandbox escape”
+- `CVE-2026-5426`: “hard-coded asp.net/iis machinekey value ... allows adversaries to circumvent viewstate validation mechanisms”
 
 ### The hardest boundary
 
 **Which two labels:**
 HIGH and CRITICAL
 **The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
-For CVSS severity classification, the hardest boundary is HIGH vs CRITICAL because the text often contains the same keywords:
-use-after-free
-type confusion
-arbitrary code execution
-sandbox escape
-memory corruption
-
-Yet some are labeled HIGH and others CRITICAL.
+The description alone does not decide this boundary: I use the record's official CVSS `baseSeverity`. For CVSS v3.x and v4, HIGH corresponds to a base score of 7.0–8.9 and CRITICAL to 9.0–10.0. If the same terms (such as “arbitrary code execution” or “sandbox escape”) appear in both, I keep the severity recorded by CVSS rather than relabeling from keywords.
 
 ---
 
@@ -113,10 +96,10 @@ Yet some are labeled HIGH and others CRITICAL.
      cases. -->
 
 **Where the posts came from:**
-The dataset was collected from CVE JSON records containing vulnerability descriptions and CVSS metadata. Each sample consists of the vulnerability description extracted from the CVE record and the corresponding CVSS severity label. Reference https://nvd.nist.gov/vuln/data-feeds.
+The dataset was extracted from the public CVE JSON dump in `data/CVE_2026`. Each row combines a CNA vulnerability description with CVSS severity metadata in the CVE record; CVE and NVD feeds provide the source records ([NVD data feeds](https://nvd.nist.gov/vuln/data-feeds)).
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
 Say so plainly — the disclosure is required, not penalised. -->
-The data was automatically labeled using the CVSS baseSeverity field already present in each CVE record. No manual relabeling was performed. The labels were extracted programmatically and converted to numeric classes.
+The labels were extracted automatically from the CVSS `baseSeverity` field in the first ADP entry; CVSS v4.0, v3.1, v3.0, and v2.0 metric fields are checked in that order. Keeping the first ADP preserves the source-selection policy used to build this dataset while supporting CVSS schema versions beyond v3.1. The description comes from the CNA description field. I did not manually relabel the records. `data/extract_labels.py` normalizes descriptions, keeps one row per cleaned-text/severity pair, and writes `labels.csv` with `text`, `label`, and `note` columns. Identical descriptions carrying different official severities are retained rather than arbitrarily choosing one label.
 **Counts per label:**
 
 |  Label     | Count | Share |
@@ -124,7 +107,7 @@ The data was automatically labeled using the CVSS baseSeverity field already pre
 |  LOW       | 117   | 3.7%  |
 |  MEDIUM    | 1319  | 41.5% |
 |  HIGH      | 1284  | 40.4% |
-|  CRITICAL  | 455   | 14.3# |
+|  CRITICAL  | 455   | 14.3% |
 | **Total**  | 3175  | 100%  |
 
 **Three hard cases**
@@ -134,44 +117,68 @@ The data was automatically labeled using the CVSS baseSeverity field already pre
 
 **1.**
 > *The post:*
->"use after free in media in google chrome prior to allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page."
+>`CVE-2026-5883`: “use after free in media in google chrome ... allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.”
 > *Could have been:*
 > CRITICAL
 > *I chose, because:*
-> HIGH, If the record is scored HIGH, I assign HIGH even when the description contains terms such as "arbitrary code execution", "use-after-free", "type confusion", or "memory corruption".
+> HIGH. The official CVSS `baseSeverity` is HIGH; code execution language alone does not override that label.
 
 **2.**
 > *The post:*
->"type confusion in angle in google chrome prior to allowed a remote attacker to potentially perform a sandbox escape via a crafted html page."
+>`CVE-2026-11061`: “type confusion in angle ... allowed a remote attacker to potentially perform a sandbox escape via a crafted html page.”
 > *Could have been:*
 > HIGH
 > *I chose, because:*
-> CRITICAL, If the official CVSS severity in the CVE record is CRITICAL, I assign the CRITICAL label. 
+> CRITICAL. The official CVSS `baseSeverity` is CRITICAL, even though “sandbox escape” also appears in HIGH descriptions.
 
 **3.**
 > *The post:*
->"use after free in websockets in google chrome prior to allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page."
+>`CVE-2026-11068`: “use after free in websockets in google chrome ... allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.”
 > *Could have been:*
 > CRITICAL
 > *I chose, because:*
-> HIGH, The official CVSS severity always overrides my interpretation of the vulnerability text.
+> HIGH. The official CVSS `baseSeverity` is HIGH; the description's exploit language is not a substitute for its CVSS score.
 ---
 
 ## The Training Run
 
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
-**Base model:**
+**Base model:** `distilbert-base-uncased`
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Settings:** Learning rate `2e-5`, batch size `16`, seed `42`, maximum sequence length `128`. The first run trained for 3 epochs. For the second run I changed only the epoch count, from 3 to 6.
 
-**Anything I changed from the defaults, and why:**
+**Split sizes:** 2,221 train / 477 validation / 477 test (70% / 15% / 15%, stratified). The 477-row test split contains LOW 18, MEDIUM 198, HIGH 193, and CRITICAL 68; no class has fewer than 8 test examples.
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+**Held-out test results** (seed 42; recorded in [`results.json`](results.json)): accuracy `0.633124`, macro F1 `0.420202`.
 
+| Label | Test support | Test F1 |
+|---|---:|---:|
+| LOW | 18 | 0.240000 |
+| MEDIUM | 198 | 0.732394 |
+| HIGH | 193 | 0.651270 |
+| CRITICAL | 68 | 0.057143 |
 
+**Validation history — 3 epochs:**
+
+| Epoch | Training loss | Validation loss | Accuracy | Macro F1 |
+|---:|---:|---:|---:|---:|
+| 1 | 0.867700 | 0.888156 | 0.631027 | 0.346474 |
+| 2 | 0.818700 | 0.818471 | 0.675052 | 0.516893 |
+| 3 | 0.701500 | 0.811576 | 0.664570 | 0.523919 |
+
+**Validation history — 6 epochs:**
+
+| Epoch | Training loss | Validation loss | Accuracy | Macro F1 |
+|---:|---:|---:|---:|---:|
+| 1 | 0.855800 | 0.878345 | 0.633124 | 0.347926 |
+| 2 | 0.807200 | 0.808116 | 0.672956 | 0.548618 |
+| 3 | 0.681400 | 0.800203 | 0.675052 | 0.593533 |
+| 4 | 0.665900 | 0.802945 | 0.672956 | 0.609411 |
+| 5 | 0.551900 | 0.834772 | 0.670860 | 0.587709 |
+| 6 | 0.488100 | 0.843396 | 0.677149 | 0.607847 |
+
+The longer run's final validation accuracy was 0.677149 versus 0.664570 after 3 epochs, and its final macro F1 was 0.607847 versus 0.523919 (+0.083928). The longer run reached its best macro F1 at epoch 4 (0.609411), while its lowest validation loss was at epoch 3 (0.800203). Validation loss then rose through epoch 6 as training loss continued to fall, suggesting overfitting after about epoch 3; early stopping at epoch 3–4 would be reasonable depending on whether loss or macro F1 is prioritized. The held-out test evaluation is recorded in [`results.json`](results.json). Both complete validation histories and run settings are recorded in [`training_runs.json`](training_runs.json).
 
 ---
 
@@ -197,6 +204,16 @@ of next unit's variance. -->
 - *What I changed:* I used the examples to identify ambiguous cases and refine my definitions before labeling a larger set.
 
 **Pre-labelling disclosure:** AI helped me extract existing labels from the NVD database and generate test examples. I did not use it to pre-label my data.
+
+
+
+## Stretch Features
+
+**Fourth label:** CRITICAL is the stretch addition to the three-label version. It captures the most severe CVSS cases separately instead of merging them into HIGH, preserving a distinction the original three labels would have missed.
+
+**Second training run:** I increased the epoch count from 3 to 6 while holding the model, learning rate, batch size, seed, and data splits constant. The run histories and settings are in [`training_runs.json`](training_runs.json). Macro F1 improved from 0.523919 at epoch 3 of the first run to a peak of 0.609411 at epoch 4 of the second run; validation loss was lowest at epoch 3 of the longer run and then increased, so additional epochs improved the class-balanced score but also showed an overfitting signal.
+
+---
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
