@@ -41,8 +41,7 @@
 
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
-
-
+This project trains a DistilBERT text classifier to predict the CVSS severity of a software vulnerability based solely on its natural language description. The dataset consists of CVE records collected from public vulnerability disclosures and automatically labeled using the CVSS severity provided in each record. The classifier learns patterns associated with LOW, MEDIUM, HIGH, and CRITICAL vulnerabilities and can be used to estimate severity from previously unseen descriptions.
 
 ---
 
@@ -55,29 +54,45 @@
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
 ### `label_one`
-
+LOW
 **Definition:**
-
+Vulnerabilities with limited security impact, requiring significant constraints or resulting in minimal compromise of confidentiality, integrity, or availability.
 **Example 1:**
->
-
+>Use after free in gpu in google chrome prior to allowed a remote attacker who had compromised the renderer process to perform an out of bounds memory write via a crafted html page.
 **Example 2:**
->
+>CVEs in the dataset labeled with CVSS severity LOW, typically involving limited impact or highly constrained exploitation conditions.
 
 ### `label_two`
-
+MEDIUM
 **Definition:**
-
+Vulnerabilities that present a meaningful security risk but usually require user interaction, specific conditions, or provide only partial impact.
 **Example 1:**
->
-
+>A use-after-free issue was addressed with improved memory management. This issue is fixed in iOS and iPadOS ...
 **Example 2:**
->
+>This issue was addressed with additional entitlement checks. An app may be able to circumvent app restrictions...
+
+### `label_three`
+HIGH
+**Definition:**
+Vulnerabilities that can significantly impact confidentiality, integrity, or availability and are often remotely exploitable.
+**Example 1:**
+>Use-after-free in the DOM: Networking component. This vulnerability was fixed in Firefox ...
+**Example 2:**
+>Integer overflow in the audio/video component. This vulnerability was fixed in Firefox 148...
+
+### `label_four`
+CRITICAL
+**Definition:**
+Vulnerabilities that can lead to severe compromise of a system, such as remote code execution, sandbox escape, or full system takeover.
+**Example 1:**
+>Use-after-free in the JavaScript engine component. This vulnerability was fixed in Firefox 148...
+**Example 2:**
+>Sandbox escape due to incorrect boundary conditions in the telemetry component in external software...
 
 ### The hardest boundary
 
 **Which two labels:**
-
+HIGH and CRITICAL
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
@@ -92,18 +107,19 @@
      cases. -->
 
 **Where the posts came from:**
-
+The dataset was collected from CVE JSON records containing vulnerability descriptions and CVSS metadata. Each sample consists of the vulnerability description extracted from the CVE record and the corresponding CVSS severity label. Reference https://nvd.nist.gov/vuln/data-feeds.
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
 Say so plainly — the disclosure is required, not penalised. -->
-
+The data was automatically labeled using the CVSS baseSeverity field already present in each CVE record. No manual relabeling was performed. The labels were extracted programmatically and converted to numeric classes.
 **Counts per label:**
 
-| Label | Count | Share |
-|---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| Label     | Count | Share |
+| ---       | ---   | ---   |
+| LOW       | 117   | 3.7%  |
+| MEDIUM    | 1319  | 41.5% |
+| HIGH      | 1284  | 40.4% |
+| CRITICAL  | 455   | 14.3# |
+| **Total** | 3175  | 100%  |
 
 **Three hard cases**
 
