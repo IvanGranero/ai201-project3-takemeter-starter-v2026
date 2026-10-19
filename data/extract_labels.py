@@ -8,10 +8,10 @@ INPUT_DIR = r"./data/CVE_2026"
 OUTPUT_CSV = "labels.csv"
 
 LABEL_MAP = {
-    "LOW": 0,
-    "MEDIUM": 1,
-    "HIGH": 2,
-    "CRITICAL": 3,
+    "LOW": "LOW",
+    "MEDIUM": "MEDIUM",
+    "HIGH": "HIGH",
+    "CRITICAL": "CRITICAL",
 }
 
 MAX_TEXT_LENGTH = 200
