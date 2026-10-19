@@ -186,17 +186,17 @@ of next unit's variance. -->
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* Help me create a script to extract labels from the NVD database.
+- *What came back:* A script for retrieving and organizing the existing NVD labels.
+- *What I changed:* I reviewed and adapted the script for my project and checked that it extracted the labels I needed.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* Given my definitions, write eight posts that sit on the boundaries between the categories.
+- *What came back:* Eight boundary-case posts to test whether my definitions led to clear classifications.
+- *What I changed:* I used the examples to identify ambiguous cases and refine my definitions before labeling a larger set.
 
-**Pre-labelling disclosure:**
+**Pre-labelling disclosure:** AI helped me extract existing labels from the NVD database and generate test examples. I did not use it to pre-label my data.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
