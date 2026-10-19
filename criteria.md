@@ -54,60 +54,50 @@ whether you hit them:
 ## 1.
 
 <!-- Your criterion. It must name a number. -->
-
-
+The model must achieve at least 75% overall accuracy on the held-out test set across all three random seeds.
 
 **Why this target:**
-
-
+This is a four-class classification problem (LOW, MEDIUM, HIGH, CRITICAL), so random guessing would achieve roughly 25% accuracy. The dataset contains over 3,000 labeled CVE records, which is large enough for DistilBERT to substantially outperform chance. A target of 75% represents a useful classifier while remaining realistic given that many vulnerability descriptions use similar language across severity levels.
 
 ---
 
 ## 2.
 
 <!-- Your criterion. -->
-
-
+The macro F1-score must be at least 0.70 on the held-out test set across all three random seeds.
 
 **Why this target:**
-
-
+Accuracy alone can hide poor performance on minority classes. Macro F1 treats all labels equally, including LOW and CRITICAL. Because LOW represents only 117 samples while MEDIUM and HIGH together account for most of the dataset, macro F1 is necessary to ensure the model performs reasonably across all classes instead of focusing on majority labels.
 
 ---
 
 ## 3.
 
 <!-- Your criterion. -->
-
-
+Each label must achieve an F1-score of at least 0.55.
 
 **Why this target:**
-
-
+The LOW class contains only 117 examples (approximately 3.7% of the dataset), making it difficult to learn compared with MEDIUM and HIGH. Requiring every class to reach 0.70 F1 would be unrealistic, but allowing any class to fall below 0.55 would indicate the classifier is largely failing to recognize that category.
 
 ---
 
 ## 4.
 
 <!-- Your criterion. -->
-
-
+The difference between the best-performing label F1-score and the worst-performing label F1-score must not exceed 0.25.
 
 **Why this target:**
-
-
+The dataset is imbalanced, but the classifier should still provide consistent value across all severity levels. For example, if HIGH achieved 0.90 F1 while LOW achieved 0.40 F1, the model would be unreliable for some severity categories. Limiting the performance gap helps ensure balanced behavior.
 
 ---
 
 ## 5.
 
 <!-- Your criterion. -->
-
-
+Predictions with a confidence score of 90% or greater must be correct at least 85% of the time.
 
 **Why this target:**
-
-
+Security analysts are more likely to trust predictions that the model considers highly confident. If a prediction is reported with very high confidence, it should be correct most of the time. This criterion evaluates calibration rather than raw classification performance and ensures the confidence score remains meaningful.
 
 ---
 
