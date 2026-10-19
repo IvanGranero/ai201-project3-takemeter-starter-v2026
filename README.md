@@ -119,13 +119,13 @@ Say so plainly — the disclosure is required, not penalised. -->
 The data was automatically labeled using the CVSS baseSeverity field already present in each CVE record. No manual relabeling was performed. The labels were extracted programmatically and converted to numeric classes.
 **Counts per label:**
 
-| Label     | Count | Share |
-| ---       | ---   | ---   |
-| LOW       | 117   | 3.7%  |
-| MEDIUM    | 1319  | 41.5% |
-| HIGH      | 1284  | 40.4% |
-| CRITICAL  | 455   | 14.3# |
-| **Total** | 3175  | 100%  |
+|  Label     | Count | Share |
+|  ---       | ---   | ---   |
+|  LOW       | 117   | 3.7%  |
+|  MEDIUM    | 1319  | 41.5% |
+|  HIGH      | 1284  | 40.4% |
+|  CRITICAL  | 455   | 14.3# |
+| **Total**  | 3175  | 100%  |
 
 **Three hard cases**
 
