@@ -96,8 +96,14 @@ HIGH and CRITICAL
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
+For CVSS severity classification, the hardest boundary is HIGH vs CRITICAL because the text often contains the same keywords:
+use-after-free
+type confusion
+arbitrary code execution
+sandbox escape
+memory corruption
 
-
+Yet some are labeled HIGH and others CRITICAL.
 
 ---
 
@@ -128,25 +134,27 @@ The data was automatically labeled using the CVSS baseSeverity field already pre
 
 **1.**
 > *The post:*
->
+>"use after free in media in google chrome prior to allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page."
 > *Could have been:*
->
+> CRITICAL
 > *I chose, because:*
+> HIGH, If the record is scored HIGH, I assign HIGH even when the description contains terms such as "arbitrary code execution", "use-after-free", "type confusion", or "memory corruption".
 
 **2.**
 > *The post:*
->
+>"type confusion in angle in google chrome prior to allowed a remote attacker to potentially perform a sandbox escape via a crafted html page."
 > *Could have been:*
->
+> HIGH
 > *I chose, because:*
+> CRITICAL, If the official CVSS severity in the CVE record is CRITICAL, I assign the CRITICAL label. 
 
 **3.**
 > *The post:*
->
+>"use after free in websockets in google chrome prior to allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page."
 > *Could have been:*
->
+> CRITICAL
 > *I chose, because:*
-
+> HIGH, The official CVSS severity always overrides my interpretation of the vulnerability text.
 ---
 
 ## The Training Run
