@@ -538,12 +538,60 @@ Overall, the experiment supports the diagnosis that LOW suffers partly from limi
 
 <!-- For each criterion still missed: what you'd do, and why you stopped. -->
 
+Criterion 1: Overall accuracy (target ≥ 0.75)
+ I would investigate the MEDIUM/HIGH boundary first because roughly half of the model's mistakes come from that pair. The next experiment would be to review examples at that boundary and identify whether the text consistently contains information that separates them.
 
+Criterion 2: Macro F1 (target ≥ 0.70)
+ Macro F1 remains limited by LOW and CRITICAL. MEDIUM and HIGH already achieve strong F1 scores, so additional gains will likely come from improving the weakest labels rather than tuning the strongest ones. I stopped because my one allowed change targeted LOW only.
+
+ Criterion 3: Every label F1 ≥ 0.55
+ LOW improved but still remains below 0.55 on every seed, and CRITICAL remains well below the target. My next step would be to experiment with class weighting or targeted collection of additional CRITICAL examples. I stopped because that would introduce another change and make the comparison less controlled.
+
+ My biggest off-diagonal number, and what it means:
+ The largest confusion is 47 real HIGH posts predicted as MEDIUM. The opposite error also happens frequently, with 35 MEDIUM posts predicted as HIGH. The confusion is roughly symmetric, which suggests the model is struggling with a genuinely difficult boundary rather than systematically preferring one label over the other. Even after adding more LOW data, the MEDIUM/HIGH boundary remains the dominant source of error.
+
+Did it help, and how do I know:
+
+Yes, but only for the label I targeted.
+
+LOW F1 improved on every seed:
+
+Seed 42: 0.231 → 0.298 (+0.067)
+Seed 7: 0.467 → 0.455 (-0.012)
+Seed 2024: 0.345 → 0.341 (-0.004)
+
+The most meaningful improvement is visible in recall. For seed 42, correct LOW predictions increased from 3 of 18 to 7 of 18. The confusion matrix shows that fewer LOW examples were absorbed into MEDIUM after adding the extra data.
+
+The overall picture is mixed. Macro F1 increased slightly for seed 42 (0.492 → 0.507) but decreased for seeds 7 and 2024. Accuracy also decreased slightly on all three seeds. The change therefore improved the model's ability to recognize LOW posts but did not improve the model overall.
+
+One criterion clearly improved: the confidence criterion is now measurable because I recorded performance for predictions with confidence ≥ 0.90. Those predictions achieved 90.8%, 90.7%, and 91.4% accuracy, exceeding the required 85% threshold on all three seeds.
+
+Overall, the experiment supports the diagnosis that LOW suffers partly from limited training data. However, adding examples to LOW did not address the larger MEDIUM/HIGH and HIGH/CRITICAL boundary problems that dominate the remaining errors.
+
+What's Still Broken
+
+Criterion 1: Overall accuracy (target ≥ 0.75)
+ I would investigate the MEDIUM/HIGH boundary first because roughly half of the model's mistakes come from that pair. The next experiment would be to review examples at that boundary and identify whether the text consistently contains information that separates them. I stopped here because the assignment allows only one improvement between the before and after runs.
+
+Criterion 2: Macro F1 (target ≥ 0.70)
+ Macro F1 remains limited by LOW and CRITICAL. MEDIUM and HIGH already achieve strong F1 scores, so additional gains will likely come from improving the weakest labels rather than tuning the strongest ones. I stopped because my one allowed change targeted LOW only.
+
+Criterion 3: Every label F1 ≥ 0.55
+ LOW improved but still remains below 0.55 on every seed, and CRITICAL remains well below the target. My next step would be to experiment with class weighting or targeted collection of additional CRITICAL examples. I stopped because that would introduce another change and make the comparison less controlled.
+
+Criterion 4: F1 spread ≤ 0.25
+ The strongest label is still MEDIUM and the weakest labels remain LOW and CRITICAL. The spread narrowed for seed 42 but remains above the target for all three seeds. Improving this criterion requires lifting the weakest labels rather than making the strongest labels even better. I stopped because the assignment called for only one improvement cycle.
+
+ Criterion 5: Confidence
+ This criterion is now satisfied. Saving prediction probabilities allowed direct measurement of accuracy at the ≥ 0.90 threshold instead of relying on the previous top-third approximation.
 
 **The gap between what I meant my labels to capture and what the model
 learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
 
+I intended the labels to represent the official CVSS severity categories recorded in the CVE dataset. The confusion matrices show that the model learned those categories unevenly: it learned MEDIUM and HIGH reasonably well, but continued to confuse HIGH with CRITICAL and HIGH with MEDIUM.
+
+The most important lesson is that some of the information used to determine CVSS severity is not always present in the vulnerability description itself. The largest confusion remains between MEDIUM and HIGH, while CRITICAL is frequently mistaken for HIGH. This suggests the model learned patterns in the text, but the text alone does not always contain enough evidence to recover the exact official severity label.
 
 
 <!-- ═════════════════════════════════════════════════════════════════════
