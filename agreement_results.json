@@ -1,0 +1,43 @@
+{
+  "compared": 30,
+  "agreed": 23,
+  "agreement_rate": 0.7666666666666667,
+  "disagreements": [
+    {
+      "text": "an out-of-bounds read vulnerability exists in the `decodelookuptable` function within `dicomimagedecoder.cpp`. the lookup-table decoding logic used for `palette color` images does not validate pixel",
+      "staff": "MEDIUM",
+      "mine": "HIGH"
+    },
+    {
+      "text": "improper access control in the notification management endpoints in devolutions server allows an unauthenticated attacker to modify or delete arbitrary user notification records via missing session",
+      "staff": "MEDIUM",
+      "mine": "HIGH"
+    },
+    {
+      "text": "memory safety bugs present in firefox <version> and thunderbird <version>. some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been",
+      "staff": "HIGH",
+      "mine": "CRITICAL"
+    },
+    {
+      "text": "insufficient data validation in media in google chrome prior to <version> allowed a remote attacker to perform an out of bounds memory read via a crafted video file.",
+      "staff": "HIGH",
+      "mine": "MEDIUM"
+    },
+    {
+      "text": "use after free in web midi in google chrome on android prior to <version> allowed a remote attacker to execute arbitrary code via a crafted html page.",
+      "staff": "CRITICAL",
+      "mine": "HIGH"
+    },
+    {
+      "text": "the magic export & import wordpress plugin before <version> stores exported csv files at a publicly accessible location, making it possible for any visitors to leak sensitive user information.",
+      "staff": "HIGH",
+      "mine": "MEDIUM"
+    },
+    {
+      "text": "an out-of-bounds read vulnerability exists in `dicomstreamreader` during dicom meta-header parsing. when processing malformed metadata structures, the parser may read beyond the bounds of the",
+      "staff": "MEDIUM",
+      "mine": "HIGH"
+    }
+  ],
+  "staff_posts_not_in_mine": 0
+}

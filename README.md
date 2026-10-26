@@ -329,7 +329,7 @@ Accuracy moved 0.057 across seeds. Enough that a criterion landing within that b
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
+**Agreement rate:** 23 / 30 = 77%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
@@ -353,24 +353,82 @@ Accuracy moved 0.057 across seeds. Enough that a criterion landing within that b
 
 **1.**
 > *The post:*
->
+>“an out-of-bounds read vulnerability exists in the decodelookuptable function within dicomimagedecoder.cpp. the lookup-table decoding logic used for palette color images does not validate pixel…”
 > *Staff said / I said:*
->
+>MEDIUM / HIGH
 > *My call, and why:*
->
+>Staff is right. The visible text describes an out-of-bounds read and states no disclosure, crash or code execution. Rule 4 says a read with no stated impact is MEDIUM, and rule 5 says to judge only the visible text. I went to HIGH because DICOM parsers handle untrusted files, which is outside knowledge the rules tell me not to use.
 > *Which pile:*
+> (a) the rule covered it and I applied it loosely
 
 **2.**
 > *The post:*
->
+>“an out-of-bounds read vulnerability exists in dicomstreamreader during dicom meta-header parsing. when processing malformed metadata structures, the parser may read beyond the bounds of the…”
 > *Staff said / I said:*
->
+>MEDIUM / HIGH
 > *My call, and why:*
->
+>Staff is right, for the same reason as #1. This is a read with no stated impact, so rule 4 gives MEDIUM, and the cut-off text can’t be filled in under rule 5. This is the same mistake repeated, which shows it was a habit and not a one-off slip.
 > *Which pile:*
+> (a) the rule covered it and I applied it loosely
+
+**3.**
+> *The post:*
+>“insufficient data validation in media in google chrome prior to <version> allowed a remote attacker to perform an out of bounds memory read via a crafted video file.”
+> *Staff said / I said:*
+>HIGH / MEDIUM
+> *My call, and why:*
+>I think I’m right. This is an out-of-bounds read with no stated crash, disclosure or code execution, so rule 4 gives MEDIUM. Staff’s own labels agree with that rule: they gave MEDIUM to the two DICOM reads and to the webml read that leaks process memory. HIGH here contradicts rule 4 unless staff treated “remote attacker” as enough on its own, and rule 4 is the more specific rule.
+> *Which pile:*
+> (c) the rule is ambiguous here and my reading is defensible. This is a win.
+
+**4.**
+> *The post:*
+>“memory safety bugs present in firefox <version> and thunderbird <version>. some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been…”
+> *Staff said / I said:*
+>HIGH / CRITICAL
+> *My call, and why:*
+>I think my reading is more consistent. Staff labelled the near-identical Firefox ESR post CRITICAL. Rule 1 allows CRITICAL for vendor-stated evidence of memory corruption in a core client, and both posts state that. The only visible difference is the hedge “we presume…”, so staff may have read this one as speculative. That reading is not unreasonable, but the hedge is about exploitation, not about the evidence the vendor reports, so I would keep both posts at the same label.
+> *Which pile:*
+> (c) the rule is ambiguous here and my reading is defensible. This is a win, with the caveat that staff has a real counter-argument.
+
+**5.**
+> *The post:*
+>“improper access control in the notification management endpoints in devolutions server allows an unauthenticated attacker to modify or delete arbitrary user notification records via missing session…”
+> *Staff said / I said:*
+>MEDIUM / HIGH
+> *My call, and why:*
+>The rules don’t settle it. Rule 2 makes unauthenticated tampering with server configuration HIGH, but it says nothing about unauthenticated writes to data records. I extended it by analogy because the access is unauthenticated and covers modify and delete. Staff read notification records as low value. Both readings are defensible, so the definitions need to say whether unauthenticated write access to records counts, and whether the value of the records matters.
+> *Which pile:*
+> (b) the rule genuinely doesn’t say
+
+**6.**
+> *The post:*
+>“use after free in web midi in google chrome on android prior to <version> allowed a remote attacker to execute arbitrary code via a crafted html page.”
+> *Staff said / I said:*
+>CRITICAL / HIGH
+> *My call, and why:*
+>The rules don’t settle it. Rule 1 needs no user interaction and code execution outside a sandbox. The post doesn’t mention a sandbox, and staff read that silence as outside it. I read “crafted html page” as a victim having to load the page, which is user interaction. The rules don’t define “user interaction” or say what silence about the sandbox implies, so neither of us can be shown wrong.
+> *Which pile:*
+> (b) the rule genuinely doesn’t say
+
+**7.**
+> *The post:*
+>“the magic export & import wordpress plugin before <version> stores exported csv files at a publicly accessible location, making it possible for any visitors to leak sensitive user information.”
+> *Staff said / I said:*
+>HIGH / MEDIUM
+> *My call, and why:*
+>The rules don’t settle it. Rule 3 makes an info leak MEDIUM when its scope is “bounded”, but never defines bounded. The post is an unauthenticated leak of sensitive user information, which pulls toward HIGH, but it is still an info leak, and rule 2 lists none as HIGH. I weighted the type of impact and staff weighted the lack of authentication. The definitions need to say whether unauthenticated access to bulk user data lifts a leak above MEDIUM.
+> *Which pile:*
+> (b) the rule genuinely doesn’t say
+
 
 **What the pattern in my disagreements tells me:**
+The 7 disagreements split into 2 in pile (a), 2 in pile (c) and 3 in pile (b).
 
+Pile (a): both misses are the same error, where I used knowledge from outside the post (that DICOM parsers handle untrusted files) to push an out-of-bounds read up a level. Rule 4 and rule 5 forbid exactly that. Across my own 200 labels, the risk is that I let product familiarity or my sense of how bad a bug usually is override what the text actually says. I should re-check my 200 for places where a label depends on something that isn’t in the text.
+Pile (c): both wins come from consistency. In #3 staff broke its own rule 4 pattern, and in #4 the same vendor-stated evidence got two different labels. That tells me I apply a rule the same way when two posts match, and that will matter when I check my 200 for internal consistency.
+Pile (b): three of the seven disagreements trace to undefined terms: “user interaction”, “bounded”, and unauthenticated writes to data. Those are definition problems and not labelling problems, so they are the first things to tighten in my own taxonomy before I blame the labels or the model.
+Overall: most of the disagreement sits on the MEDIUM/HIGH boundary. If a model struggles there in Milestone 4, I should first check whether the boundary is poorly defined before concluding the model is weak.
 
 
 ---

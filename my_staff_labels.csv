@@ -1,0 +1,31 @@
+text,label
+an out-of-bounds read vulnerability exists in the `decodelookuptable` function within `dicomimagedecoder.cpp`. the lookup-table decoding logic used for `palette color` images does not validate pixel,HIGH
+improper access control in the notification management endpoints in devolutions server allows an unauthenticated attacker to modify or delete arbitrary user notification records via missing session,HIGH
+policy bypass in downloads in google chrome prior to <version> allowed a remote attacker to bypass of multi-download protections via a crafted html page.,MEDIUM
+"memory safety bugs present in firefox esr <version>, firefox esr <version>, thunderbird esr <version>, firefox <version> and thunderbird <version>. some of these bugs showed evidence of memory",CRITICAL
+insufficient validation of untrusted input in webml in google chrome prior to <version> allowed a remote attacker to perform an out of bounds memory write via a crafted html page.,HIGH
+"a buffer overflow in dnsmasq’s extract_addresses() function allows an attacker to trigger a heap out-of-bounds read and crash by exploiting a malformed dns response, enabling extract_name() to",HIGH
+memory safety bugs present in firefox <version> and thunderbird <version>. some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been,CRITICAL
+"libcurl might in some circumstances reuse the wrong connection when asked to do an authenticated http(s) request after a negotiate-authenticated one, when both use the same host. libcurl features a",MEDIUM
+"reflected cross-site scripting (xss) vulnerability in radware alteon <version> vadc load-balancer allows an attacker to inject malicious scripts into the website, potentially leading to unauthorized",MEDIUM
+type confusion in v8 in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.,HIGH
+"hard-coded asp.net/iis machinekey value in digital knowledge knowledgedeliver deployments prior to february 24, 2026 allows adversaries to circumvent viewstate validation mechanisms and achieve",CRITICAL
+insufficient data validation in media in google chrome prior to <version> allowed a remote attacker to perform an out of bounds memory read via a crafted video file.,MEDIUM
+use after free in media in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.,HIGH
+incorrect security ui in omnibox in google chrome on ios prior to <version> allowed a remote attacker to spoof the contents of the omnibox (url bar) via a crafted domain name.,MEDIUM
+use after free in web midi in google chrome on android prior to <version> allowed a remote attacker to execute arbitrary code via a crafted html page.,HIGH
+"javascript is vulnerable to prototype pollution in mafintosh's protocol-buffers-schema version <version>, where an attacker may alter the application logic, bypass security checks, cause a dos or",MEDIUM
+improper check for unusual or exceptional conditions vulnerability in drupal saml sso - service provider allows privilege escalation. this issue affects saml sso - service provider: from <version>,HIGH
+"the magic export & import wordpress plugin before <version> stores exported csv files at a publicly accessible location, making it possible for any visitors to leak sensitive user information.",MEDIUM
+policy bypass in iframesandbox in google chrome prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to bypass navigation restrictions via a crafted,MEDIUM
+"unauthenticated configuration file modification vulnerability in drc central office services (cos) allows an attacker to modify the server's configuration file, potentially leading to mass data",HIGH
+insufficient validation of untrusted input in webml in google chrome on windows prior to <version> allowed a remote attacker to obtain potentially sensitive information from process memory via a,MEDIUM
+policy bypass in audio in google chrome prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to bypass sandbox download restrictions via a crafted html,MEDIUM
+insufficient validation of untrusted input in angle in google chrome on mac prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.,HIGH
+side-channel information leakage in navigation in google chrome prior to <version> allowed a remote attacker to leak cross-origin data via a crafted html page.,MEDIUM
+a gzip decompression bomb vulnerability exists when orthanc processes http request with `content-encoding: gzip`. the server does not enforce limits on decompressed size and allocates memory based on,HIGH
+out of bounds read and write in v8 in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.,HIGH
+policy bypass in serviceworkers in google chrome prior to <version> allowed a remote attacker to bypass content security policy via a crafted html page.,MEDIUM
+"an out-of-bounds read vulnerability exists in `dicomstreamreader` during dicom meta-header parsing. when processing malformed metadata structures, the parser may read beyond the bounds of the",HIGH
+a memory exhaustion vulnerability exists in the http server due to unbounded use of the `content-length` header. the server allocates memory directly based on the attacker supplied header value,HIGH
+inappropriate implementation in v8 in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.,HIGH
