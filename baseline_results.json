@@ -1,0 +1,2425 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 477,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 477,
+    "accuracy": 0.3689727463312369,
+    "f1_macro": 0.17170922129275584,
+    "per_label": {
+      "CRITICAL": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 68
+      },
+      "HIGH": {
+        "precision": 0.32,
+        "recall": 0.04145077720207254,
+        "f1": 0.07339449541284404,
+        "support": 193
+      },
+      "LOW": {
+        "precision": 0.034482758620689655,
+        "recall": 0.1111111111111111,
+        "f1": 0.05263157894736842,
+        "support": 18
+      },
+      "MEDIUM": {
+        "precision": 0.4213197969543147,
+        "recall": 0.8383838383838383,
+        "f1": 0.5608108108108109,
+        "support": 198
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "wegia is a web manager for charitable institutions. prior to <version>, an open redirect vulnerability was identified in the /wegia/controle/control.php endpoint of the wegia application,",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in wedevs wedocs wedocs allows exploiting incorrectly configured access control security levels.this issue affects wedocs: from n/a through <= <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "utt aggressive hiper 810g v3v1.<version>-171114 was discovered to contain a buffer overflow in the timestart parameter of the configadvideo function. this vulnerability allows attackers to cause a",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "issue summary: an uncommon configuration of clients performing dane tlsa-based server authentication, when paired with uncommon server dane tlsa records, may result in a use-after-free and/or",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "deserialization of untrusted data vulnerability in edge-themes pelicula pelicula-video-production-and-movie-theme allows object injection.this issue affects pelicula: from n/a through < <version>.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of special elements used in an sql command ('sql injection') vulnerability in codepeople cp contact form with paypal cp-contact-form-with-paypal allows blind sql",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "out of bounds read in gpu in google chrome on mac prior to <version> allowed a remote attacker to perform an out of bounds memory read via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in dhd_tcpdata_info_get of dhd_ip.c, there is a possible denial of service due to a precondition check failure. this could lead to remote denial of service with no additional execution privileges",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "a stored cross-site scripting (xss) vulnerability exists in the notchatbot webchat widget thru <version>. user-supplied input is not properly sanitized before being stored and rendered in the chat",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "use after free in views in google chrome on windows prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted html",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue in fastcms before v.<version> allows a local attacker to execute arbitrary code via the plugincontroller.java component",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a heap buffer overflow vulnerability exists in the netwide assembler (nasm) due to a lack of bounds checking in the obj_directive() function. this vulnerability can be exploited by a user assembling",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper input validation, improper control of generation of code ('code injection') vulnerability in apache activemq broker, apache activemq all, apache activemq. an authenticated attacker may",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a sql injection vulnerability was found in the schedulesublist.php file of itsourcecode online student enrollment system v1.0. the reason for this issue is that the 'subjcode' parameter is directly",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "agl agl-service-can-low-level thru <version> contains a stack buffer overflow in the uds-c library. the send_diagnostic_request function in uds.c allocates a 6-byte stack buffer",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "in modem, there is a possible system crash due to a heap buffer overflow. this could lead to remote denial of service, if a ue has connected to a rogue base station controlled by the attacker, with",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of special elements used in an expression language statement ('expression language injection') vulnerability in apache ofbiz. this issue affects apache ofbiz: before",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in the linux kernel, the following vulnerability has been resolved: rxrpc: also unshare data/response packets when paged frags are present the data-packet handler in rxrpc_input_call_event() and the",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "type confusion in css in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in gfx in google chrome on linux prior to <version> allowed a remote attacker to potentially exploit heap corruption via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "imager::file::gif versions through <version> for perl allow a heap out of bounds (oob) write on crafted multi-frame gif files. imager::file::gif's i_readgif_multi_low allocates a single per-row",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "locutus brings stdlibs of other programming languages to javascript for educational purposes. starting in version <version> and prior to version <version>, a prototype pollution vulnerability exists",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a bug in apache airflow's variable response masker caused nested-key redaction (triggered by secret-suffixed key names like `password`, `token`, `secret`, `api_key`) to be bypassed when the json",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "libcasper(3) communicates with helper processes via unix domain sockets, and uses the select(2) system call to wait for data to become available. however, it does not verify that its socket",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in loader in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to bypass site isolation via a crafted html",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of input during web page generation ('cross-site scripting') vulnerability in themefic hydra booking hydra-booking allows stored xss.this issue affects hydra booking: from n/a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "out of bounds read in v8 in google chrome prior to <version> allowed a remote attacker to perform out of bounds memory access via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in pdf in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to perform ui spoofing via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the nexent v1.<version> backend service contains an unauthorized arbitrary file deletion vulnerability in its elasticsearch service interface. the delete /{index_name}/documents endpoint lacks proper",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "type confusion in css in google chrome prior to <version> allowed an attacker who convinced a user to install a malicious extension to potentially exploit heap corruption via a crafted chrome",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of input during web page generation ('cross-site scripting') vulnerability in villatheme abandoned cart recovery for woocommerce woo-abandoned-cart-recovery allows stored",
+      "gold": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "inappropriate implementation in animation in google chrome prior to <version> allowed a remote attacker to leak cross-origin data via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "boolean xpath expressions that evaluate to true can cause an infinite loop in logicalquery.select, leading to 100% cpu usage. this can be triggered by top-level selectors such as \"1=1\" or \"true()\".",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "a server-side request forgery (ssrf) in the /plugins/{name}/upgrade-from-uri endpoint of halo v2.<version> allows authenticated attackers to scan internal resources via a crafted get request.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in angle in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted html page.",
+      "gold": "CRITICAL",
+      "predicted": "LOW"
+    },
+    {
+      "text": "integer overflow in angle in google chrome prior to <version> allowed a remote attacker to potentially perform out of bounds memory access via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in wlan, there is a possible out of bounds write due to a heap buffer overflow. this could lead to remote (proximal/adjacent) escalation of privilege with no additional execution privileges needed.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "incorrect boundary conditions in the audio/video: web codecs component. this vulnerability was fixed in firefox 151, firefox esr <version>, firefox esr <version>, thunderbird 151, and thunderbird",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a file access issue was addressed with improved input validation. this issue is fixed in macos tahoe <version>. an attacker may gain access to protected parts of the file system.",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "improper validation of specified quantity in input vulnerability in boldgrid w3 total cache w3-total-cache allows accessing functionality not properly constrained by acls.this issue affects w3 total",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in devtools in google chrome prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to bypass same origin",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "when a challenge ack is to be sent tcp_respond() constructs and sends the challenge ack and consumes the mbuf that is passed in. when no challenge ack should be sent the function returns and leaks",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "sensitive user account information is not encrypted in the database in devolutions server <version> and earlier, which allows an attacker with access to the database to obtain sensitive user",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "uninitialized use in gpu in google chrome on android prior to <version> allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of input during web page generation ('cross-site scripting') vulnerability in bplugins icon list block icon-list-block allows stored xss.this issue affects icon list block:",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "textract through <version> is vulnerable to os command injection via the file path parameter in multiple extractors. when processing files with malicious filenames, the filepath is passed directly to",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the pstrip64.sys driver in entech taiwan powerstrip <=<version> allows local users to escalate privileges to system via a crafted ioctl request enabling unprivileged users to map arbitrary physical",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "this issue was addressed with improved checks to prevent unauthorized actions. this issue is fixed in ios <version> and ipados <version>, macos sequoia <version>, macos tahoe <version>, tvos",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "policy bypass in serviceworkers in google chrome prior to <version> allowed a remote attacker to bypass content security policy via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "dovestones softwares ad self update <<version> is vulnerable to cross site request forgery (csrf). the affected endpoint processes state-changing requests without requiring a csrf token or equivalent",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an integer overflow was addressed with improved input validation. this issue is fixed in macos sequoia <version>, macos sonoma <version>, macos tahoe <version>. processing a maliciously crafted",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper access control in multiple dvls rest api endpoints in devolutions server <version> and earlier allows an authenticated user with view-only permission to access sensitive connection data.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "utt aggressive hiper 1200gw v2.<version>-170306 was discovered to contain a buffer overflow in the timerangename parameter of the formconfigdnsfilterglobal function. this vulnerability allows",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "url redirection to untrusted site ('open redirect') vulnerability in john darrel hide my wp ghost hide-my-wp allows phishing.this issue affects hide my wp ghost: from n/a through < <version>.",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "use after free in webauthentication in google chrome prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to potentially exploit heap corruption via a",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in pictureinpicture in google chrome prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to perform ui spoofing via a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "server-side request forgery (ssrf) vulnerability in andy fragen embed pdf viewer embed-pdf-viewer allows server side request forgery.this issue affects embed pdf viewer: from n/a through <= <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "jenkins ldap plugin 807.v7d7de30930cf and earlier deserializes data from ldap referrals without validation.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in accessibility in google chrome on windows prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the dukapress wordpress plugin through <version> does not sanitise and escape a parameter before outputting it back in the page, leading to a reflected cross-site scripting which could be used",
+      "gold": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "incorrect security ui in lookalikechecks in google chrome on android prior to <version> allowed a remote attacker to perform ui spoofing via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an out-of-bounds read in the read_global_param() function (libavcodec/av1dec.c) of ffmpeg v8.<version> allows attackers to cause a denial of service (dos) via a crafted input.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "software installed and run as a non-privileged user may conduct improper gpu system calls to cause mismanagement of a mapping state maintained for a sparse memory allocation. the product accidentally",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in mae, there is a possible out of bounds write due to a missing bounds check. this could lead to local escalation of privilege if a malicious actor has already obtained the system privilege. user",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "cockpit v2.<version> and earlier is vulnerable to arbitrary code execution via the filter parameter within multiple endpoints. this vulnerability allows an attacker to run system commands on the",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "tar.reader can allocate an unbounded amount of memory when reading a maliciously-crafted archive containing a large number of sparse regions encoded in the \"old gnu sparse map\" format.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "memory safety bugs present in firefox esr <version> and firefox 150. some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "server-side request forgery (ssrf) in microsoft bing allows an unauthorized attacker to elevate privileges over a network.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the issue was addressed with improved input validation. this issue is fixed in ios <version> and ipados <version>, ios <version> and ipados <version>, macos sequoia <version>, macos sonoma <version>,",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "server-side request forgery (ssrf) vulnerability in getty images getty images getty-images allows server side request forgery.this issue affects getty images: from n/a through <= <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "issue summary: applications using aes-cfb128 encryption or decryption on systems with avx-512 and vaes support can trigger an out-of-bounds read of up to 15 bytes when processing partial cipher",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an out-of-bounds read vulnerability in vrmldata_indexedlineset::tshape in the vrml parser in open cascade technology (occt) v8_0_0_rc5 allows attackers to cause a denial of service via a crafted vrml",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "insertion of sensitive information into sent data vulnerability in p\u00e4r thernstr\u00f6m simple history simple-history allows retrieve embedded sensitive data.this issue affects simple history: from n/a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "pyload is a free and open-source download manager written in python. in <version>.0b3.dev96 and earlier, pyload has a server-side request forgery (ssrf) vulnerability. the fix for cve-2026-33992",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "unqlite versions through <version> for perl uses a potentially insecure version of the unqlite library. unqlite for perl embeds the unqlite library. version <version> and earlier of the perl module",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "gitea's notification api does not re-validate repository access permissions when returning notification details. after a user's access to a private repository is revoked, they may still view issue",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the issue was addressed with improved memory handling. this issue is fixed in ios <version> and ipados <version>, ios <version> and ipados <version>, macos sequoia <version>, macos sonoma <version>,",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "heap buffer overflow in chromecast in google chrome on android, linux, chromeos prior to <version> allowed a local attacker to execute arbitrary code inside a sandbox via malicious network traffic.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insecure permissions vulnerability in deepcool deepcreative v.<version> and before allows a local attacker to execute arbitrary code via a crafted file",
+      "gold": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "use-after-free in the dom: core & html component. this vulnerability was fixed in firefox 148 and thunderbird 148.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient input validation of the `plugin` parameter of the `create_user` plugin allows arbitrary perl code execution on behalf of the already authenticated account's system user.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "in wlan sta driver, there is a possible escalation of privilege due to a missing bounds check. this could lead to local escalation of privilege with user execution privileges needed. user interaction",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "casdoor versions <version> and earlier contain a vulnerability enabling cross-organization token exchange. the gettokenexchangetoken function in object/token_oauth.go validates jwt signatures but",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in permissions in google chrome prior to <version> allowed an attacker on the local network segment to leak cross-origin data via malicious network traffic.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in actor in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "shenzhen tenda technology co., ltd tenda fh451 v1.<version> was discovered to contain a stack overflow in the list1 parameter of the fromdhcplistclient function. this vulnerability allows attackers",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in navigation in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to bypass site isolation via a crafted html page.",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "uninitialized use in skia in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in kutethemes kuteshop kuteshop allows exploiting incorrectly configured access control security levels.this issue affects kuteshop: from n/a through <= <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in omnibox in google chrome prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to inject arbitrary scripts",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a permissions issue was addressed with additional restrictions. this issue is fixed in macos sequoia <version>, macos sonoma <version>, macos tahoe <version>. an app may be able to modify protected",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "due to improper neutralization of special elements, sql statements can be injected via the handshake of a tls-srp connection. this can be used to inject known credentials into the database that can",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in password manager in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of input during web page generation ('cross-site scripting') vulnerability in don-themes riode riode allows reflected xss.this issue affects riode: from n/a through <",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "sourcecodester pharmacy point of sale system v1.0 is vulnerable to sql injection in /pharmacy/view_supplier.php.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in wp-configurator wp configurator pro wp-configurator-pro allows exploiting incorrectly configured access control security levels.this issue affects wp",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "dedecms v5.<version> was discovered to contain a cross-site request forgery (csrf) vulnerability in /sys_task_add.php.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of input during web page generation ('cross-site scripting') vulnerability in uicore uicore elements uicore-elements allows stored xss.this issue affects uicore elements: from",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an authenticated stored cross-site scripting (xss) vulnerability in the category module of feehi cms v2.<version> allows attackers to execute arbitrary web scripts or html via injecting a crafted",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "improper control of filename for include/require statement in php program ('php remote file inclusion') vulnerability in creativews kiddy kiddy allows php local file inclusion.this issue affects",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in input in google chrome on android prior to <version> allowed a remote attacker who had compromised the renderer process to bypass site isolation via a crafted html",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "buffer overflow vulnerability in easy chat server <version> allows a remote attacker to obtain sensitive information and execute arbitrary code via the chat message functionality",
+      "gold": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "a path handling issue was addressed with improved logic. this issue is fixed in safari <version>, ios <version> and ipados <version>, ios <version> and ipados <version>, macos sequoia <version>,",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "stack buffer overflow in webrtc in google chrome prior to <version> allowed a remote attacker to potentially exploit stack corruption via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "use after free in v8 in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a memory corruption issue was addressed with improved state management. this issue is fixed in ios <version> and ipados <version>, macos tahoe <version>, tvos <version>, visionos <version>, watchos",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in network in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the backend database management connection test feature in wgcloud v3.<version> has a server-side request forgery (ssrf) vulnerability. this issue can be exploited to make the server send requests to",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the mem0 <version> server lacks authentication and authorization controls for its memory reset and table re-creation functionality accessible via the delete /memories endpoint. an unauthenticated",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "mercusys ac12g (eu) v1 with firmware ac12g(eu)_v1_200909 responds to version.bind chaos txt queries, disclosing the dns resolver software version (unbound <version>), aiding targeted attacks against",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insecure xml parser configuration in apache cxf's ws-transfer module may allow attackers to perform xxe attacks. users are recommended to upgrade to versions <version>, <version> or <version>, which",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "missing authorization vulnerability in vowelweb vw school education vw-school-education allows exploiting incorrectly configured access control security levels.this issue affects vw school education:",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue in fohrloop dash-uploader v.<version> through v.<version>.0a2 allows a remote attacker to execute arbitrary code via the dash_uploader/httprequesthandler.py, dash_uploader/upload.py in the",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "heap buffer overflow in video in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in multiple functions of ubsan_throwing_runtime.cpp, there is a possible ubsan failure due to an integer overflow. this could lead to remote denial of service with no additional execution privileges",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "the \"privileged helper\" component of the arturia software center (macos) does not perform sufficient client code signature validation when a client connects. this leads to an attacker being able to",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "use after free in xr in google chrome on windows prior to <version> allowed a remote attacker to execute arbitrary code via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a privacy issue was addressed with improved private data redaction for log entries. this issue is fixed in macos sequoia <version>, macos sonoma <version>, macos tahoe <version>. an app may be able",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in wp folio team ppwp password-protect-page allows exploiting incorrectly configured access control security levels.this issue affects ppwp: from n/a through <=",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the issue was addressed with improved memory handling. this issue is fixed in ios <version> and ipados <version>, macos tahoe <version>, tvos <version>, visionos <version>, watchos <version>. an app",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in usb in google chrome prior to <version> allowed a remote attacker to execute arbitrary code via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in display, there is a possible out of bounds read due to a missing bounds check. this could lead to local information disclosure if a malicious actor has already obtained the system privilege. user",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "heap buffer overflow in webcodecs in google chrome prior to <version> allowed a remote attacker to perform an out of bounds memory write via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of input during web page generation ('cross-site scripting') vulnerability in publishpress post expirator post-expirator allows dom-based xss.this issue affects post",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a permissions issue was addressed with additional restrictions. this issue is fixed in macos sequoia <version>, macos sonoma <version>, macos tahoe <version>. an app may be able to access sensitive",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in textencoding in google chrome prior to <version> allowed a remote attacker to potentially exploit heap corruption via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "mercusys ac12g (eu) v1 router with firmware ac12g(eu)_v1_200909 discloses kernel memory layout via the upnp getstatusinfo action. an unauthenticated attacker on the adjacent network can obtain a raw",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "in writetoparcel of windowinfo.cpp, there is a possible way to trick a user into accepting a permission due to a tapjacking/overlay attack. this could lead to local escalation of privilege with no",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "missing authorization vulnerability in wpradiant chocolate house chocolate-house allows exploiting incorrectly configured access control security levels.this issue affects chocolate house: from n/a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "when a user explicitly requested thunderbird to decrypt an inline openpgp message that was embedded in a text section of an email that was formatted and styled with html and css, then the decrypted",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "casdoor versions <version> and earlier contain a vulnerability that allows an attacker to bypass authentication by supplying an arbitrary signing certificate. the buildspcertificatestore function",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "sourcecodester online reviewer system v1.0 is vulnerale to sql injection in the file /system/system/admins/assessments/examproper/exam-update.php.",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "undefined behavior in the dom: core & html component. this vulnerability was fixed in firefox 148, firefox esr <version>, firefox esr <version>, thunderbird 148, and thunderbird <version>.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "sandbox escape due to use-after-free in the disability access apis component. this vulnerability was fixed in firefox 151, firefox esr <version>, firefox esr <version>, thunderbird 151, and",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a server-side request forgery (ssrf) in the /ureport/datasource/testconnection endpoint of springblade v4.<version> allows authenticated attackers to scan internal resources via a crafted get request.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "jit miscompilation in the javascript engine: jit component. this vulnerability was fixed in firefox 149, firefox esr <version>, firefox esr <version>, thunderbird 149, and thunderbird <version>.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in page info in google chrome on android prior to <version> allowed a remote attacker who had compromised the renderer process to bypass navigation restrictions via a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "out of bounds read in filesystem in google chrome on mac prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to obtain potentially sensitive",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of input during web page generation ('cross-site scripting') vulnerability in toocheke toocheke companion toocheke-companion allows dom-based xss.this issue affects toocheke",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "cross-site request forgery (csrf) vulnerability in themegoods grand magazine grandmagazine allows cross site request forgery.this issue affects grand magazine: from n/a through <= <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of input during web page generation ('cross-site scripting') vulnerability in ideabox creations powerpack addons for elementor powerpack-lite-for-elementor allows stored",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a permissions issue was addressed with additional restrictions. this issue is fixed in macos tahoe <version>. an app may be able to access protected user data.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "heap buffer overflow in angle in google chrome on mac prior to <version> allowed a remote attacker to execute arbitrary code via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "server-side request forgery (ssrf) vulnerability in drupal openid connect / oauth client allows server side request forgery.this issue affects openid connect / oauth client: from <version> before",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of input during web page generation ('cross-site scripting') vulnerability in don-themes molla molla allows reflected xss.this issue affects molla: from n/a through <",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "visitor management system <version> by sanjay1313 is vulnerable to unrestricted file upload in vms/php/admin_user_insert.php and vms/php/update_1.php. the move_uploaded_file() function is called",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in glowlogix wp frontend profile wp-front-end-profile allows exploiting incorrectly configured access control security levels.this issue affects wp frontend",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a buffer overflow in mod_proxy_html in apache http server <version> and earlier allows an attack by an untrusted backend. users are recommended to upgrade to version <version>, which fixes this issue.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "information disclosure in the graphics: webgpu component. this vulnerability was fixed in firefox 151 and thunderbird 151.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "out of bounds read in ui in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in andrew shopwp wpshopify allows exploiting incorrectly configured access control security levels.this issue affects shopwp: from n/a through <= <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in mwp development diet calorie calculator diet-calorie-calculator allows exploiting incorrectly configured access control security levels.this issue affects diet",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in multiple functions of mem_protect.c, there is a possible out-of-bounds write due to a logic error in the code. this could lead to local escalation of privilege with no additional execution",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "out of bounds read in webaudio in google chrome on mac prior to <version> allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "race in webcodecs in google chrome prior to <version> allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in chrome for ios in google chrome on ios prior to <version> allowed a remote attacker to leak cross-origin data via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in reader mode in google chrome on android prior to <version> allowed a local attacker to bypass navigation restrictions via a malicious file.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "calling the scanf family of functions with a %mc (malloc'd character match) in the gnu c library version <version> to version <version> with a format width specifier with an explicit width greater",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in passwords in google chrome prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to leak cross-origin data via a crafted",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "slah cms v1.<version> and below was discovered to contain a remote code execution (rce) vulnerability in the session() function at config.php. this vulnerability is exploitable via a crafted input.",
+      "gold": "CRITICAL",
+      "predicted": "LOW"
+    },
+    {
+      "text": "an insecure direct object reference (idor) vulnerability was discovered in onlyoffice docspace before <version>. the flaw exists in multiple rest api endpoints. this allows authenticated users with",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in ios in google chrome on ios prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to execute arbitrary code via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper access control in the pctcore64.sys windows kernel driver from pc tools internet security allows user-mode processes to access the pctcoredriver wdm device interface and invoke privileged",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "other issue in the webrtc component. this vulnerability was fixed in firefox esr <version> and thunderbird <version>.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the imgaug library thru <version> contains an insecure deserialization vulnerability in its backgroundaugmenter class within the multicore.py module. the class uses python's pickle module to",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a zip slip vulnerability in the admin import functionality of ctfd v3.<version>-18-gdb5a18c4 allows attackers to write arbitrary files outside the intended directories via supplying a crafted import.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "jit miscompilation in the javascript engine component. this vulnerability was fixed in firefox 149, firefox esr <version>, thunderbird 149, and thunderbird <version>.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in extensions in google chrome prior to <version> allowed an attacker who convinced a user to install a malicious extension to potentially exploit heap corruption via a crafted html",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in surfacecapture in google chrome on android prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an operator precedence bug in the kernel results in a scenario where a buffer overflow causes attacker-controlled data to overwrite adjacent execve(2) argument buffers. the bug may be exploitable by",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in input in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "the traceroute diagnostic handler in /bin/httpd_clientside for altice labs / sfr france gr140dg and gr140ig fibre cpe/router/gateway, inserts unsanitized user input into a system() call, allowing",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of script-related html tags in a web page (basic xss) vulnerability in kutethemes techone techone allows code injection.this issue affects techone: from n/a through <=",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue was discovered in <version> before <version>, <version> before <version>, and <version> before <version>. race condition in file-system storage and file-based cache backends in django allows",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the rsa and dsa public key parsers did not enforce size limits on key parameters. a crafted public key with an excessively large modulus or dsa parameter could cause several minutes of cpu",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a post-authentication null pointer dereference vulnerability in sonicos allows a remote attacker to crash a firewall.",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "missing authorization vulnerability in illid share this image share-this-image allows exploiting incorrectly configured access control security levels.this issue affects share this image: from n/a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "sglangs multimodal generation runtime is vulnerable to unauthenticated remote code execution when the --enable-custom-logit-processor option is enabled, as python objects loaded via dill.loads() will",
+      "gold": "CRITICAL",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "inappropriate implementation in customtabs in google chrome on android prior to <version> allowed a local attacker to leak cross-origin data via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in getcallingpackagename of shared.java, there is a possible way to bypass activity start restrictions due to a confused deputy. this could lead to local escalation of privilege with no additional",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "this issue was addressed with improved checks. this issue is fixed in ios <version> and ipados <version>, ios <version> and ipados <version>, macos tahoe <version>, tvos <version>, visionos",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "out of bounds read and write in tint in google chrome on mac prior to <version> allowed a remote attacker to perform out of bounds memory access via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper control of generation of code ('code injection') vulnerability in email services of apache ofbiz. this issue affects apache ofbiz: before <version>. users are recommended to upgrade to",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "due to missing neutralization of special elements, os commands can be injected via the handshake of a tls-srp connection, which are ultimately run as the root user. this issue affects mr9600:",
+      "gold": "CRITICAL",
+      "predicted": "LOW"
+    },
+    {
+      "text": "unrestricted upload of file with dangerous type vulnerability in halfdata green downloads halfdata-paypal-green-downloads allows using malicious files.this issue affects green downloads: from n/a",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "integer overflow in the networking: jar component. this vulnerability was fixed in firefox 151, firefox esr <version>, thunderbird 151, and thunderbird <version>.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "datadog::dogstatsd versions through <version> for perl allow metric injections from event tags. datadog::dogstatsd does not properly sanitise input, allowing metric injections of data from untrusted",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in fullscreen in google chrome prior to <version> allowed a remote attacker to potentially perform a sandbox escape via a crafted html page.",
+      "gold": "CRITICAL",
+      "predicted": "LOW"
+    },
+    {
+      "text": "a race condition was addressed with improved state handling. this issue is fixed in ios <version> and ipados <version>, macos sonoma <version>, macos tahoe <version>, tvos <version>, visionos",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "bacnet_stack <version> contains an out-of-bounds read in bacnet_tag_number_decode which allows attackers to cause a denial of service.",
+      "gold": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "an information leakage was addressed with additional validation. this issue is fixed in macos tahoe <version>. an app may be able to gain root privileges.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a buffer overflow was addressed with improved size validation. this issue is fixed in macos tahoe <version>. a buffer overflow may result in memory corruption and unexpected app termination.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in vanquish woocommerce support ticket system woocommerce-support-ticket-system allows path traversal.this",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "cross site scripting vulnerability in andrewtch88 mvc-ecommerce v.<version> allows a remote attacker to execute arbitrary code and obtain sensitive information via the product_catalogue.php component",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "the decent comments wordpress plugin before <version> does not restrict access to comment author email addresses and post author email addresses via its rest api endpoint, allowing unauthenticated",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "uninitialized use in ios in google chrome on ios prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to execute arbitrary code inside a sandbox via a",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the issue was addressed with improved checks. this issue is fixed in ios <version> and ipados <version>. an attacker with physical access to an ios device with stolen device protection enabled may be",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "the toascii and tounicode functions incorrectly accept punycode-encoded labels that decode to an ascii-only label. for example, tounicode(\"xn--example-.com\") incorrectly returns the name",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in payments in google chrome on android prior to <version> allowed a remote attacker who had compromised the renderer process to perform domain spoofing via a crafted",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "out of bounds read in blink in google chrome prior to <version> allowed a remote attacker to perform an out of bounds memory read via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "this issue was addressed with improved handling of symlinks. this issue is fixed in macos tahoe <version>. an app may be able to gain root privileges.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in mulika team mipl wc multisite sync mipl-wc-multisite-sync allows exploiting incorrectly configured access control security levels.this issue affects mipl wc",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "hireflow v1.2 is vulnerable to incorrect access control. the application does not enforce object-level authorization on the /candidate/<id> and /interview/<id> endpoints. the route handlers retrieve",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in approvallevelfordomaininternal of domainverificationservice.java, there is a possible way to hijack an arbitrary app link due to a logic error in the code. this could lead to local escalation of",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insertion of sensitive information into sent data vulnerability in stmcan rt-theme 18 | extensions rt18-extensions allows retrieve embedded sensitive data.this issue affects rt-theme 18 | extensions:",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an out-of-bounds write issue was addressed with improved input validation. this issue is fixed in ios <version> and ipados <version>, ios <version> and ipados <version>, macos sequoia <version>,",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in mfc_dec_dqbuf of mfc_dec_v4l2.c, there is a possible out of bounds write due to an incorrect bounds check. this could lead to local escalation of privilege with no additional execution privileges",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "a broken access control vulnerability in the password reset functionality of tata consultancy services cognix recon client v3.0 allows authenticated users to reset passwords of arbitrary user",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "cross-site scripting (xss) vulnerability exists in webkul krayin crm v2.<version>. the application fails to sanitize user-supplied input in the comment field during activity creation on the",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a flaw has been found in busy up to <version>. the affected element is an unknown function of the file source-code/busy-master/src/server/app.js of the component callback handler. executing a",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "uninitialized use in gpu in google chrome on android prior to <version> allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted html page.",
+      "gold": "LOW",
+      "predicted": "LOW"
+    },
+    {
+      "text": "inappropriate implementation in downloads in google chrome on mac prior to <version> allowed an attacker who convinced a user to install a malicious extension to perform ui spoofing via a crafted",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue was discovered in the portrait dell color management application before <version> for dell monitors. on windows, a symbolic link vulnerability allows a local low-privileged user to escalate",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "out of bounds write in skia in google chrome on mac prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted html",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use-after-free in the javascript: gc component. this vulnerability was fixed in firefox 147, firefox esr <version>, thunderbird 147, and thunderbird <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an out-of-bounds read was addressed with improved bounds checking. this issue is fixed in macos sequoia <version>, macos sonoma <version>, macos tahoe <version>. an app may be able to disclose kernel",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "integer overflow in the audio/video component. this vulnerability was fixed in firefox 148, firefox esr <version>, firefox esr <version>, thunderbird 148, and thunderbird <version>.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in codecs in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a post-authentication stack-based buffer overflow vulnerabilities in sonicos allows a remote attacker to crash a firewall.",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "deserialization of untrusted data vulnerability in edge-themes archicon archicon allows object injection.this issue affects archicon: from n/a through < <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient policy enforcement in css in google chrome prior to <version> allowed a remote attacker to leak cross-origin data via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in agile logix post timeline post-timeline allows exploiting incorrectly configured access control security levels.this issue affects post timeline: from n/a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "information disclosure, mitigation bypass in the settings ui component. this vulnerability was fixed in firefox 148 and thunderbird 148.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "uninitialized use in dawn in google chrome prior to <version> allowed a remote attacker to leak cross-origin data via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a business logic vulnerability exists in sourcecodester pharmacy product management system <version> in the add-sales.php file. the application fails to verify if the requested sales quantity",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "sourcecodester online resort management system v1.0 is vulnerable to sql injection in /orms/admin/rooms/view_room.php.",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "docker model runner (dmr) is software used to manage, run, and deploy ai models using docker. prior to version <version>, docker model runner contains an ssrf vulnerability in its oci registry token",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "heap buffer overflow in media in google chrome prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to execute arbitrary code inside a sandbox via a",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in apache ofbiz. this issue affects apache ofbiz: before <version>. users are recommended to upgrade to",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in cast in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to bypass navigation restrictions via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a parsing issue in the handling of directory paths was addressed with improved path validation. this issue is fixed in macos tahoe <version>. an app may be able to access sensitive user data.",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "race in gpu in google chrome on android prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted html page.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "this issue was addressed with improved permissions checking. this issue is fixed in ios <version> and ipados <version>, ios <version> and ipados <version>, macos sequoia <version>, macos sonoma",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "net::cidr::lite versions before <version> for perl mishandles ipv4 mapped ipv6 addresses, which may allow ip acl bypass. _pack_ipv6() includes the sentinel byte from _pack_ipv4() when building the",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in hasimage of notification.java, there is a possible way to reveal information across users due to a permissions bypass. this could lead to local escalation of privilege with no additional execution",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "heap-based buffer overflow vulnerability in apache http server with malicious backend servers and proxypassreversecookie* this issue affects apache http server: from <version> through <version>.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in pcie, there is a possible out of bounds write due to a missing bounds check. this could lead to local escalation of privilege if a malicious actor has already obtained the system privilege. user",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a memory exhaustion vulnerability exists in zip archive processing. orthanc automatically extracts zip archives uploaded to certain endpoints and trusts metadata fields describing the uncompressed",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper control of generation of code ('code injection') vulnerability in salesforce uni2ts on macos, windows, linux allows leverage executable code in non-executable files.this issue affects",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in browser in google chrome on mac prior to <version> allowed a remote attacker to execute arbitrary code via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in handlebondstatechanged of adapterservice.java, there is a possible sensitive information disclosure due to a permissions bypass. this could lead to local information disclosure with no additional",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a sql injection vulnerability was found in the assigninstructorsubjects.php file of itsourcecode online student enrollment system v1.0. the reason for this issue is that attackers can inject",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in digital credentials api in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an arbitrary file overwrite vulnerability in deftpdf document translator v54.0 allows attackers to overwrite critical internal files via the file import process, leading to arbitrary code execution",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "firefox for ios displayed specially crafted right-to-left (rtl) and internationalized domain names (idns) incorrectly in link preview ui surfaces. a crafted rtl hostname could visually reorder",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "out of bounds memory access in v8 in google chrome prior to <version> allowed a remote attacker to potentially exploit object corruption via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "use after free in canvas in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "multiple post-authentication stack-based buffer overflow vulnerabilities in the sonicos management interface due to improper bounds checking in a api endpoint.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing critical step in authentication in apache httpclient <version> allows an attacker to cause the client to accept scram-sha-256 authentication without proper mutual authentication verification.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in themefusecom brizy brizy allows exploiting incorrectly configured access control security levels.this issue affects brizy: from n/a through <= <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "jenkins <version> and earlier, lts <version> and earlier accepts run parameter values that refer to builds the user submitting the build does not have access to, allowing attackers with item/build",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "daylight studio fuelcms v1.<version> was discovered to contain an authenticated remote code execution (rce) vulnerability via the /controllers/installer.php and the function add_git_submodule.",
+      "gold": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "sql injection vulnerability in schemahero <version> via the column parameter to the columnasinsert function in file plugins/postgres/lib/column.go.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "incorrect boundary conditions, integer overflow in the audio/video: playback component. this vulnerability was fixed in firefox 150 and thunderbird 150.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in ontransact of idrmmanagerservice.cpp, there is a possible out of bounds write due to a missing bounds check. this could lead to local escalation of privilege with no additional execution",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "an issue in hostbill v.2025-11-24 and 2025-12-01 allows a remote attacker to cause a denial of service via the checkout authentication flow component",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "sourcecodester pharmacy point of sale system v1.0 is vulnerable to sql injection in /pharmacy/manage_supplier.php.",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "hireflow v1.2 does not implement csrf token validation on any state-changing post endpoint. all forms (password change at /profile, candidate deletion at /candidates/delete/<id>, feedback submission",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper control of filename for include/require statement in php program ('php remote file inclusion') vulnerability in creativews metamax metamax allows php local file inclusion.this issue affects",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "mitigation bypass in the networking: http component. this vulnerability was fixed in firefox 149, firefox esr <version>, thunderbird 149, and thunderbird <version>.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a regression in the way hashes were calculated caused rules containing the address range syntax (x.x.x.x - y.y.y.y) that only differ in the address range(s) involved to be silently dropped as",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "when verifying a certificate chain which contains a certificate containing multiple email address constraints which share common local portions but different domain portions, these constraints will",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in wppochipp pochipp pochipp allows exploiting incorrectly configured access control security levels.this issue affects pochipp: from n/a through < <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue was discovered in totolink a3300r firmware v17.0.0cu.557_b20221024 allowing attackers to execute arbitrary commands via the url parameter to /cgi-bin/cstecgi.cgi.",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "uninitialized memory in the graphics: canvas2d component. this vulnerability was fixed in firefox 149, firefox esr <version>, thunderbird 149, and thunderbird <version>.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "when a fusefs file system implements extended attributes, the kernel may send a fuse_listxattr message to the userspace daemon to retrieve the list of extended attributes for a given file. the fuse",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "devome grr v4.<version> was discovered to contain multiple authenticated sql injection vulnerabilities in the include/session.inc.php file via the referer and user-agent.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in wallet in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to perform ui spoofing via a crafted html",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in __host_check_page_state_range of mem_protect.c, there is a possible out of bounds write due to an incorrect bounds check. this could lead to local escalation of privilege with no additional",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "improper control of filename for include/require statement in php program ('php remote file inclusion') vulnerability in kutethemes boutique kute-boutique allows php local file inclusion.this issue",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "buffer overflow vulnerability in arendst tasmota v.<version> and before allows a remote attacker to execute arbitrary code via the tasmota/tasmota_xdrv_driver/xdrv_10_scripter.ino, fetch_jpg()",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the performance monitor wordpress plugin through <version> does not validate a parameter before making a request to it, which could allow unauthenticated users to perform ssrf attacks",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "an issue was discovered in totolink a3300r firmware v17.0.0cu.557_b20221024 allowing attackers to execute arbitrary commands via the stunport parameter to /cgi-bin/cstecgi.cgi.",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "use after free in input in google chrome on android prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "code-projects simple student alumni system v1.0 is vulnerable to sql injection in /tracerstudy/recordteacher_edit.php.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an arbitrary file overwrite vulnerability in ora tools pdf reader ' reader & editor appv4.<version> allows attackers to overwrite critical internal files via the file import process, leading to",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an injection issue was addressed with improved validation. this issue is fixed in macos sequoia <version>, macos sonoma <version>, macos tahoe <version>. an app may be able to access sensitive user",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "path traversal: '.../...//' vulnerability in bogdan bendziukov squeeze squeeze allows path traversal.this issue affects squeeze: from n/a through <= <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in openxiangshan nemu prior to 55295c4, when running with rvh (hypervisor extension) enabled, a vs-mode guest write to the supervisor interrupt-enable csr (sie) may be handled incorrectly and can",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in getpreferredsize of launcherprocessimagelistener.kt, there is a possible denial of service due to resource exhaustion. this could lead to local denial of service with no additional execution",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "northern.tech cfengine enterprise before <version>, <version>, and <version> allows xss.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "mercusys ac12g (eu) v1 with firmware ac12g(eu)_v1_200909 exposes an undocumented /agileconfigreset endpoint that returns internal buffer contents to unauthenticated attackers on the adjacent network.",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "inappropriate implementation in navigation in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "ibm mq <version> through <version> lts, <version> through <version> lts, <version> through <version> lts, <version> through <version> cd, <version> through <version> lts, and <version> through",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "sandbox escape due to incorrect boundary conditions in the telemetry component in external software. this vulnerability was fixed in firefox 148, firefox esr <version>, firefox esr <version>,",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in webmidi in google chrome on android prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted html",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a blind sql injection vulnerability exists in sourcecodester loan management system v1.0. the vulnerability is located in the ajax.php file (specifically the save_loan action). the application fails",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in ymc filter & grids ymc-smart-filter allows exploiting incorrectly configured access control security levels.this issue affects filter & grids: from n/a through",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in ipospays ipospays gateways wc ipospays-gateways-wc allows exploiting incorrectly configured access control security levels.this issue affects ipospays gateways",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "out of bounds read in skia in google chrome prior to <version> allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted file.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "privilege escalation in the security component. this vulnerability was fixed in firefox 151, firefox esr <version>, thunderbird 151, and thunderbird <version>.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an authorization bypass vulnerability in tata consultancy services cognix recon client v3.0 allows authenticated users to escalate privileges across role boundaries via crafted requests.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "integer overflow in angle in google chrome on windows prior to <version> allowed a remote attacker to perform an out of bounds memory write via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "policy bypass in blink in google chrome prior to <version> allowed a remote attacker to perform ui spoofing via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a permissions issue was addressed with additional restrictions. this issue is fixed in macos sequoia <version>, macos sonoma <version>, macos tahoe <version>. a malicious app may be able to break out",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "an issue was discovered in mbed tls through <version> and tf-psa-crypto <version>. a buffer overflow can occur in public key export for ffdh keys.",
+      "gold": "CRITICAL",
+      "predicted": "LOW"
+    },
+    {
+      "text": "inappropriate implementation in tint in google chrome prior to <version> allowed a remote attacker to perform out of bounds memory access via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a race condition was addressed with additional validation. this issue is fixed in macos sequoia <version>, macos sonoma <version>, macos tahoe <version>. an app may be able to break out of its",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient policy enforcement in web bluetooth in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue was discovered in zimbra collaboration (zcs) <version> and <version>. a stored cross-site scripting (xss) vulnerability exists in the zimbra briefcase feature due to insufficient",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in autofill in google chrome prior to <version> allowed a remote attacker to potentially perform a sandbox escape via malicious network traffic.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in navigation in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to bypass site isolation via a crafted",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of special elements used in an sql command ('sql injection') vulnerability in delphiknight geo to lat geo-to-lat allows blind sql injection.this issue affects geo to lat: from",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in raratheme book landing page book-landing-page allows exploiting incorrectly configured access control security levels.this issue affects book landing page: from",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "discourse is an open-source discussion platform. from versions <version>-latest to before <version>, <version>-latest to before <version>, and <version>-latest to before <version>, an attacker with",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "northern.tech mender enterprise server before <version> has incorrect access control.",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in serviceworker in google chrome prior to <version> allowed an attacker who convinced a user to install a malicious extension to execute arbitrary code via a crafted chrome extension.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "out of bounds read and write in v8 in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "hms networks ewon flexy with firmware before 15.0s4, cosy+ with firmware 22.xx before 22.1s6, and cosy+ with firmware 23.xx before 23.0s3 have weak entropy for authentication cookies, allowing an",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a local attacker who can execute privileged csr operations (or can induce firmware to do so) performs carefully crafted reads/writes to menvcfg (e.g., csrrs in m-mode). on affected xiangshan versions",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in setglobalproxy of devicepolicymanagerservice.java, there is a possible desync in persistence due to improper input validation. this could lead to local escalation of privilege with no additional",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "missing authorization vulnerability in coderpress commerce coinbase for woocommerce commerce-coinbase-for-woocommerce allows exploiting incorrectly configured access control security levels.this",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a use-of-uninitialized memory vulnerability exists in libxls <version> when parsing malformed xls files. the issue is reachable via xls_parseworkbook() and is triggered by uninitialized heap memory",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a command injection vulnerability exists in the ipsec vpn feature of inhand networks ir302 firmware v3.<version>, ir305 firmware v1.<version>, ir315 firmware v1.<version>, ir615 firmware",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in __pkvm_host_share_guest of mem_protect.c, there is a possible out of bounds write due to an integer overflow. this could lead to local escalation of privilege with no additional execution",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "when adding a key to a remote agent constraint extensions such as restrict-destination-v00@openssh.com were not serialized in the request. destination restrictions were silently stripped when",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the register protection of the powervr gpu is incorrectly configured. this could lead to local information disclosure with no additional execution privileges needed. user interaction is not needed",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "missing authorization vulnerability in bowo admin and site enhancements (ase) admin-site-enhancements allows exploiting incorrectly configured access control security levels.this issue affects admin",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "mercusys ac12g (eu) v1 with firmware ac12g(eu)_v1_200909 contains hardcoded wifi driver credentials including a radius shared secret, wps test key, and default psk embedded in the production firmware",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "jenkins credentials binding plugin 719.v80e905ef14eb_ and earlier does not sanitize file names for file and zip file credentials, allowing attackers able to provide credentials to a job to write",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the yith woocommerce wishlist wordpress plugin before <version> does not properly validate wishlist ownership in the save_title() ajax handler before allowing wishlist renaming operations. the",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the factory reset functionality in gncc gp5 v7.<version> fails to clear sensitive cryptographic material in the jffs2 configuration partition, possibly allowing attackers to recover and obtain",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue was discovered in speedexam online examination system (saas) after v.fev2026. it allows broken access control via the reviewanswerdetails asp.net pagemethod. authenticated attackers can",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "gazelle versions through <version> for perl allows http request smuggling via improper header precedence. gazelle incorrectly prioritizes \"content-length\" over \"transfer-encoding: chunked\" when both",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the issue was addressed with improved memory handling. this issue is fixed in ios <version> and ipados <version>, ios <version> and ipados <version>, macos sonoma <version>, macos tahoe <version>,",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the mem0 <version> server lacks authentication and authorization controls for its memory deletion api endpoint (delete /memories/{memory_id}). the endpoint allows unauthenticated users to delete",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient policy enforcement in webxr in google chrome on android prior to <version> allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper control of generation of code ('code injection') vulnerability in jetmonsters jetformbuilder jetformbuilder allows code injection.this issue affects jetformbuilder: from n/a through <=",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in webmidi in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "sql injection in muucmf t6 v1.<version> allows an unauthenticated attacker to compromise the entire database, achieve unauthorized administrative access, and potentially gain remote code execution by",
+      "gold": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "on linux, if the target of root.chmod is replaced with a symlink while the chmod operation is in progress, chmod can operate on the target of the symlink, even when the target lies outside the root.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in cronet in google chrome on android prior to <version> allowed a remote attacker to perform domain spoofing via a crafted domain name.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "modification of assumed-immutable data (maid) vulnerability in drupal translate drupal with gtranslate allows resource location spoofing. this issue affects translate drupal with gtranslate: from",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in l2c_fcr_clone_buf of l2c_fcr.cc, there is a possible way to trigger controlled heap corruption within the privileged bluetooth process due to an integer overflow. this could lead to local",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in file system access in google chrome prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to bypass discretionary access",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization in the pam module in devolutions server allows an authenticated user with a pam license but no additional permissions to obtain otp secret keys and recovery codes via crafted",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in themefusion fusion builder fusion-builder allows exploiting incorrectly configured access control security levels.this issue affects fusion builder: from n/a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use-after-free in the dom: bindings (webidl) component. this vulnerability was fixed in firefox 151, firefox esr <version>, firefox esr <version>, thunderbird 151, and thunderbird <version>.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue in the bluetooth rfcomm service of parani m10 motorcycle intercom v2.<version> allows unauthorized attackers to cause a denial of service (dos) via supplying crafted rfcomm frames.",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "software installed and run as a non-privileged user may conduct improper gpu system calls to gain write permission to read-only wrapped user-mode memory. this is caused by improper handling of the",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in wp chill revive.so revive-so allows exploiting incorrectly configured access control security levels.this issue affects revive.so: from n/a through <= <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "integer overflow in devtools in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a post-authentication remote buffer overflow vulnerability exists in the /cgi-bin/admin/eventtask.cgi endpoint of the admin interface of vivotek fd8136 cameras running firmware version",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in nysl spam protect for contact form 7 wp-contact-form-7-spam-blocker allows path traversal.this issue",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in accessibility in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to perform privilege escalation via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "docling's jats xml backend is vulnerable to xml entity expansion (xxe) attacks thru <version>. the backend uses etree.parse() to parse xml files without disabling entity resolution. an attacker can",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "insecure permissions vulnerability in grokability snipe-it v.<version> and before and fixed after 2026-03-10 commit 676a9958 allows a remote attacker to execute arbitrary code via the",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "jenkins loadninja plugin <version> and earlier stores loadninja api keys unencrypted in job config.xml files on the jenkins controller where they can be viewed by users with item/extended read",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in gpu in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to potentially exploit heap corruption via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "server-side request forgery (ssrf) vulnerability in katsushi kawamori simple blog card simple-blog-card allows server side request forgery.this issue affects simple blog card: from n/a through <=",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "spoofing issue in the privacy: anti-tracking component. this vulnerability was fixed in firefox 149 and thunderbird 149.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the mem0 <version> server lacks authentication and authorization controls for its memory management api endpoints. critical functions such as updating memory records (put /memories/{memory_id}) are",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the leadconnector wordpress plugin before <version> does not have authorization in a rest route, allowing unauthenticated users to call it and overwrite existing data",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient policy enforcement in serviceworker in google chrome on prior to <version> allowed a remote attacker to leak cross-origin data via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "ridvay code's command auto-approval module contains a critical os command injection vulnerability that renders its whitelist security mechanism completely ineffective. the system relies on fragile",
+      "gold": "CRITICAL",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "insufficient validation of untrusted input in updater in google chrome on mac prior to <version> allowed a local attacker to perform os-level privilege escalation via a malicious file.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "race condition in the javascript: gc component. this vulnerability was fixed in firefox 148 and thunderbird 148.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "sourcecodester engineers online portal v1.0 is vulnerable to sql injection in update_password.php via the new_password parameter.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a logging issue was addressed with improved data redaction. this issue is fixed in ios <version> and ipados <version>, ios <version> and ipados <version>, macos sequoia <version>, macos sonoma",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "billboard.js before <version> allows an attacker to execute malicious javascript due to improper sanitization during chart option binding.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in shrikantkale izooto izooto-web-push allows exploiting incorrectly configured access control security levels.this issue affects izooto: from n/a through <=",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the recaptcha by webdesignby wordpress plugin before <version> does not sanitize or escape the site key setting before outputting it in a javascript string context via the grecaptcha_js() function.",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "object lifecycle issue in dawn in google chrome prior to <version> allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "cosyvoice thru commit 6e01309e01bc93bbeb83bdd996b1182a81aaf11e (2025-30-21) contains an insecure deserialization vulnerability (cwe-502) in its grpc server component. when the server starts, it loads",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "issue summary: during processing of a crafted cms envelopeddata message with keytransportrecipientinfo a null pointer dereference can happen. impact summary: applications that process",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "integer overflow in angle in google chrome on windows prior to <version> allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "pjsip is a free and open source multimedia communication library written in c. prior to version <version>, a heap out-of-bounds read vulnerability exists in pjsip's vp9 rtp unpacketizer that occurs",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of input during web page generation ('cross-site scripting') vulnerability in themesflat themesflat-addons-for-elementor themesflat-addons-for-elementor allows stored xss.this",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "integer overflow in the widget: win32 component. this vulnerability was fixed in firefox 151, firefox esr <version>, thunderbird 151, and thunderbird <version>.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "gncc gp5 v7.<version> was discovered to store pre-signed backblaze b2 upload urls (put requests) in plaintext to the serial console. this allows physically-proximate attackers to extract these active",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "insufficient validation of untrusted input in storage access api in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in cozy vision sms alert order notifications sms-alert allows exploiting incorrectly configured access control security levels.this issue affects sms alert order",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue was discovered in goform/formsetiptv in tenda ac15v1.0 v15.<version>.18_multi. when the condition is met, `s1_1` will be passed into sub_b0488, concatenated into `dosystemcmd`. the value of",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in aura in google chrome prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to execute arbitrary code via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "authorization bypass in the entry duplication feature in devolutions server allows an authenticated user with write access to any vault to copy documentation and attachments from an entry in a vault",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "server-side request forgery (ssrf) vulnerability exists in the announcontent of the /admin/read.php in otcms v7.66 and before. the vulnerability allows remote attackers to craft http requests,",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "stack buffer overflow in skia in google chrome prior to <version> allowed a remote attacker to potentially exploit stack corruption via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "inappropriate implementation in foldableapis in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to bypass site isolation via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "integer underflow vulnerability in open-sae-j1939 thru commit b6caf884df46435e539b1ecbf92b6c29b345bdfe (2025-11-30) in sae_j1939_read_transport_protocol_data_transfer,allows attackers to write to",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in instawp instawp connect instawp-connect allows exploiting incorrectly configured access control security levels.this issue affects instawp connect: from n/a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the wp ecommerce wordpress plugin through <version> does not have csrf check in place when deleting coupons, which could allow attackers to make a logged in admin remove them via a csrf attack",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "insufficient policy enforcement in devtools in google chrome prior to <version> allowed a remote attacker to bypass navigation restrictions via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "inappropriate implementation in gpu in google chrome on android prior to <version> allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "ntfy before <version> allows ssrf because of an unanchored regular expression.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in interestgroups in google chrome prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient policy enforcement in history in google chrome prior to <version> allowed a remote attacker to perform ui spoofing via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue was discovered in totolink a3300r firmware v17.0.0cu.557_b20221024 allowing attackers to execute arbitrary commands via the stun-pass parameter to /cgi-bin/cstecgi.cgi.",
+      "gold": "CRITICAL",
+      "predicted": "LOW"
+    },
+    {
+      "text": "insufficient validation of untrusted input in downloads in google chrome on windows prior to <version> allowed a remote attacker to bypass download restrictions via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in wlan sta driver, there is a possible out of bounds write due to a missing bounds check. this could lead to local escalation of privilege with user execution privileges needed. user interaction is",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "incorrect security ui in split view in google chrome prior to <version> allowed a remote attacker to perform ui spoofing via a crafted html page.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in wpclever wpc product bundles for woocommerce woo-product-bundle allows exploiting incorrectly configured access control security levels.this issue affects wpc",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a reflected cross-site scripting (xss) vulnerability in the login_newpwd.php endpoint of interzen consulting s.r.l zenshare suite v17.0 allows attackers to execute arbitrary javascript in the context",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient policy enforcement in viewtransitions in google chrome prior to <version> allowed a remote attacker to leak cross-origin data via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "integer overflow in fonts in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the authenticated /ui/dags endpoint did not enforce per-dag access control on embedded human-in-the-loop (hitl) and taskinstance records: a logged-in airflow user with read access to at least one dag",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "incorrect security ui in contact picker in google chrome on android prior to <version> allowed a remote attacker to perform ui spoofing via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "crewai contains a server-side request forgery vulnerability that enables content acquisition from internal and cloud services, facilitated by the rag search tools not properly validating urls",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "utt aggressive hiper 810g v3v1.<version>-171114 was discovered to contain a buffer overflow in the seldatetype parameter of the formtaskedit function. this vulnerability allows attackers to cause a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the crewai codeinterpreter tool falls back to sandboxpython when it cannot reach docker, which can enable rce through arbitrary c function calling.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the eupago gateway for woocommerce wordpress plugin before <version> does not properly restrict access to its refund request handler, allowing unauthenticated attackers to initiate refunds against",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "parse server is an open source backend that can be deployed to any infrastructure that can run node.js. prior to versions <version> and <version>-alpha.8, an attacker who possesses a valid",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in video in google chrome on windows prior to <version> allowed a remote attacker who had compromised the renderer process to perform out of bounds memory access via a crafted html",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in verifysignature of apkchecksums.java, there is a possible way to cause a crash due to resource exhaustion. this could lead to local denial of service with no additional execution privileges",
+      "gold": "MEDIUM",
+      "predicted": "LOW"
+    },
+    {
+      "text": "insufficient validation of untrusted input in webshare in google chrome on mac prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in xml in google chrome prior to <version> allowed a remote attacker to inject arbitrary scripts or html (uxss) via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "sourcecodester vehicle parking area management system v1.0 is vulnerable to sql injection in the file /parking/manage_park.php.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "type confusion in angle in google chrome prior to <version> allowed a remote attacker to potentially perform a sandbox escape via a crafted html page.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "unsafe deserialization vulnerability in mixphp framework 2.x thru <version>. the session and cache handlers use unserialize() on data from redis in the redishandler object.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an out-of-bounds write issue was addressed with improved bounds checking. this issue is fixed in ios <version> and ipados <version>, macos sequoia <version>, macos sonoma <version>, macos tahoe",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient policy enforcement in network in google chrome on android prior to <version> allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "out of bounds read in webrtc in google chrome on mac prior to <version> allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in signin in google chrome on ios prior to <version> allowed a remote attacker to perform ui spoofing via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "workbench is a suite of tools for administrators and developers to interact with salesforce.com organizations via the force.com apis. prior to <version>, workbench contains a reflected cross-site",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the template upload feature in emlog pro v2.<version> has a path traversal vulnerability, allowing authenticated administrators to execute arbitrary php code. by uploading a malicious zip archive",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in sethidesensitive of expandablenotificationrow.java, there is a possible contact name leak due due to a logic error in the code. this could lead to local information disclosure with no additional",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in webgl in google chrome prior to <version> allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "mercusys ac12g (eu) v1 with firmware ac12g(eu)_v1_200909 enables wps <version> by default with a weak lockout policy (60-second lockout after 10 attempts).",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "sourcecodester payroll management and information system v1.0 is vulnerable to sql injection in the file /payroll/view_account.php?emp_id=.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in kutethemes biolife biolife allows exploiting incorrectly configured access control security levels.this issue affects biolife: from n/a through <= <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "other issue in the storage: indexeddb component. this vulnerability was fixed in firefox 150, firefox esr <version>, thunderbird 150, and thunderbird <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in dawn in google chrome prior to <version> allowed a remote attacker to potentially perform a sandbox escape via a crafted html page.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "authentication bypass in the microsoft entra id (azure ad) authentication mode in devolutions server <version> and earlier allows an unauthenticated user to authenticate as an arbitrary entra id user",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "gopls by default communicates via pipe. however, -port and -listen flags are supported as means of debugging. if -listen is given a value without an explicit host (e.g. :8080), or -port is used,",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue in lymphatus caesium-image-compressor all versions up to and including commit 02da2c6 allows a local attacker to execute arbitrary code via the shutdownmachine and putmachinetosleep",
+      "gold": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "a stack-based out-of-bounds read vulnerability in vrmldata_scene::readline in the vrml parser in open cascade technology (occt) v8_0_0_rc5 allows attackers to cause a denial of service via a crafted",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "race in webaudio in google chrome prior to <version> allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "type confusion in angle in google chrome on windows prior to <version> allowed a remote attacker who had compromised the renderer process to perform an out of bounds memory write via a crafted html",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a race condition in the apache kafka java producer client\u2019s buffer pool management can cause messages to be silently delivered to incorrect topics. when a produce batch expires due to",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in gpu in google chrome on mac prior to <version> allowed a remote attacker who had compromised the renderer process to execute arbitrary code via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in metagauss registrationmagic custom-registration-form-builder-with-submission-manager allows exploiting incorrectly configured access control security",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the dial and lookupport functions panic on windows when provided with an input containing a nul (0).",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in linethemes smartfix smartfix allows exploiting incorrectly configured access control security levels.this issue affects smartfix: from n/a through < <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "an issue in the tvicport64.sys component of entech taiwan tvicport product v4.0, file v5.<version> allows attackers to escalate privileges via sending crafted ioctl 0x80002008 requests.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "incorrect authorization vulnerability in drupal file access fix (deprecated) allows forceful browsing.this issue affects file access fix (deprecated): from <version> before <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "spoofing issue in the dom: copy & paste and drag & drop component. this vulnerability was fixed in firefox 147, firefox esr <version>, thunderbird 147, and thunderbird <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "flexric v2.<version> crashes when the near-rt ric receives a ric_indication message with a ran_func_id that does not exist in its registry. the lookup returns null, triggering assert() in debug",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "use after free in chrome for ios in google chrome on ios prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "mrcms <version> contains an access control vulnerability. the save() method in src/main/java/org/marker/mushroom/controller/usercontroller.java lacks proper authorization validation, enabling direct",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "the activitypub wordpress plugin before <version> does not properly filter posts to be displayed, allowed unauthenticated users to access drafts/scheduled/pending posts",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in chrome for ios in google chrome on ios prior to <version> allowed a remote attacker to potentially perform a sandbox escape via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "falkordb browser <version> contains an unauthenticated path traversal vulnerability in the file upload api that allows remote attackers to write arbitrary files and achieve remote code execution.",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a type confusion issue was addressed with improved memory handling. this issue is fixed in ios <version> and ipados <version>, macos sequoia <version>, macos sonoma <version>, macos tahoe <version>,",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "if one side of the tls connection sends multiple key update messages post-handshake in a single record, the connection can deadlock, causing uncontrolled consumption of resources. this can lead to a",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a privacy issue was addressed with improved checks. this issue is fixed in macos sequoia <version>, macos sonoma <version>, macos tahoe <version>. an app may be able to access sensitive user data.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in platformintegration in google chrome on windows prior to <version> allowed a remote attacker who convinced a user to engage in specific ui gestures to execute",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in casdoor versions <version> and earlier, the saml callback handler in controllers/auth.go accepts any well-formed samlresponse sent to /api/acs without verifying that it corresponds to an",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "integer overflow in webml in google chrome prior to <version> allowed a remote attacker to potentially exploit heap corruption via a crafted html page.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "use after free in webview in google chrome on android prior to <version> allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted html",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in shahjada download manager download-manager allows exploiting incorrectly configured access control security levels.this issue affects download manager: from n/a",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of special elements used in an sql command ('sql injection') vulnerability in bdthemes element pack elementor addons bdthemes-element-pack-lite allows blind sql injection.this",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "policy bypass in downloads in google chrome prior to <version> allowed a remote attacker to bypass of multi-download protections via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "missing authorization vulnerability in ex-themes wp food wp-food allows exploiting incorrectly configured access control security levels.this issue affects wp food: from n/a through < <version>.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "gl-inet gl-ar300m16 v4.<version> was discovered to contain multiple command injection vulnerabilities in the set_upgrade function via the modem_url, target_version, current_version, firmware_upload,",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a heap-based buffer overflow vulnerability in the dot11ah.ko halow wi-fi kernel driver in morse micro halowlink 2 software versions prior to <version> allows an unauthenticated attacker within radio",
+      "gold": "CRITICAL",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "multiple stored cross-site scripting (xss) vulnerabilities in the submit_add_user.asp endpoint of ddsn interactive acora cms v10.<version> allow attackers to execute arbitrary web scripts or html via",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "an integer underflow in the bgpupdate.decodefrombytes function (/bgp/bgp.go) of gobgp v4.<version> allows attackers to cause a denial of service (dos) via supplying a crafted bgp update message.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "cross-site request forgery (csrf) vulnerability in drupal automated logout allows cross site request forgery.this issue affects automated logout: from <version> before <version>, from <version>",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a cross-site request forgery (csrf) vulnerability in jenkins multijob plugin 662.vd2e0001f6b_b_d and earlier allows attackers to resume failed multijob builds.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "improper neutralization of input during web page generation ('cross-site scripting') vulnerability in elementor elementor website builder elementor allows dom-based xss.this issue affects elementor",
+      "gold": "MEDIUM",
+      "predicted": "HIGH"
+    },
+    {
+      "text": "use after free in tab groups in google chrome prior to <version> allowed a remote attacker to execute arbitrary code via malicious network traffic.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "inappropriate implementation in permissions in google chrome prior to <version> allowed a remote attacker to leak cross-origin data via a crafted html page.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "authorization bypass through user-controlled key vulnerability in wpstream wpstream wpstream allows exploiting incorrectly configured access control security levels.this issue affects wpstream: from",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "jit miscompilation in the javascript engine: jit component. this vulnerability was fixed in firefox <version>.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "authorization bypass through user-controlled key vulnerability in mahmudul hasan arif fluentboards fluent-boards allows exploiting incorrectly configured access control security levels.this issue",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a cross-site request forgery (csrf) vulnerability exists in the web management interface of the u-speed n300 rounter v1.<version>. the device does not implement csrf protection mechanisms such as",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "cross-site request forgery (csrf) vulnerability in spicethemes spicepress spicepress allows upload a web shell to a web server.this issue affects spicepress: from n/a through <= <version>.",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a resource exhaustion issue was addressed with improved input validation. this issue is fixed in ios <version> and ipados <version>, ios <version> and ipados <version>. a remote attacker may be able",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "a logic issue was addressed with improved checks. this issue is fixed in ios <version> and ipados <version>, ios <version> and ipados <version>, macos sequoia <version>, macos sonoma <version>, macos",
+      "gold": "LOW",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "insufficient validation of untrusted input in mobile in google chrome on android prior to <version> allowed a local attacker to inject arbitrary scripts or html (uxss) via a crafted chrome extension.",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "wasmtime is a runtime for webassembly. from <version> to before <version>, <version>, and <version>, wasmtime's winch compiler backend contains a bug where translating the table.grow operator causes",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a privacy issue was addressed by removing sensitive data. this issue is fixed in ios <version> and ipados <version>, ios <version> and ipados <version>, macos sequoia <version>, macos sonoma",
+      "gold": "MEDIUM",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "casdoor versions <version> and earlier do not enforce saml assertion time bounds. the gosaml2 library reports all time-validation results, including notonorafter and notbefore, in the",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "a vulnerability was found in tenda f453 <version>. this issue affects the function frml7imform of the file /goform/l7im. the manipulation of the argument page results in buffer overflow. the attack",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "in vpu, there is a possible use-after-free read due to a race condition. this could lead to local information disclosure with no additional execution privileges needed. user interaction is not needed",
+      "gold": "LOW",
+      "predicted": "LOW"
+    },
+    {
+      "text": "insufficient policy enforcement in devtools in google chrome prior to <version> allowed a remote attacker to potentially perform a sandbox escape via malicious network traffic.",
+      "gold": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "text": "a command injection vulnerability exists in digitalocean droplet agent through <version>. the troubleshooting actioner component (internal/troubleshooting/actioner/actioner.go) processes metadata",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    },
+    {
+      "text": "memory safety bugs present in firefox esr <version>, thunderbird esr <version>, firefox 146 and thunderbird 146. some of these bugs showed evidence of memory corruption and we presume that with",
+      "gold": "HIGH",
+      "predicted": "MEDIUM"
+    }
+  ]
+}

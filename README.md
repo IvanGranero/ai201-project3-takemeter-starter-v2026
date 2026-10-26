@@ -229,20 +229,22 @@ The longer run's final validation accuracy was 0.677149 versus 0.664570 after 3 
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.369 | 0.633 | +0.264 |
+| Macro F1 | 0.172 | 0.420 | +0.248 |
+| F1 — `CRITICAL` | 0.000 | 0.057 | +0.057 |
+| F1 — `HIGH` | 0.073 | 0.651 | +0.578 |
+| F1 — `LOW` | 0.053 | 0.240 | +0.187 |
+| F1 — `MEDIUM` | 0.561 | 0.732 | +0.172 |
 
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
      prediction made afterwards isn't one. -->
+Accuracy will increase across the four labels with the trained model
 
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
-
-
+Fine-tuning the model significantly increased accuracy on HIGH labeled items, not so much on CRITICAL labeled items, this will need to be reviewed in order to improve accuracy for CRITICAL items.
 
 ---
 
