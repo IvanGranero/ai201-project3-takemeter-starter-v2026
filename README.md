@@ -253,6 +253,17 @@ Fine-tuning the model significantly increased accuracy on HIGH labeled items, no
 <!-- Five criteria across three seeds. The notebook's section 6 prints the
      spread table; the Target and Verdict columns are yours. -->
 
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.646 | 0.702 | 0.660 | 0.057 |
+| Macro F1 | 0.492 | 0.614 | 0.553 | 0.121 |
+| F1 — `LOW` | 0.231 | 0.467 | 0.345 | 0.236 |
+| F1 — `MEDIUM` | 0.736 | 0.783 | 0.727 | 0.057 |
+| F1 — `HIGH` | 0.646 | 0.702 | 0.673 | 0.056 |
+| F1 — `CRITICAL` | 0.356 | 0.504 | 0.467 | 0.147 |
+
+Accuracy moved 0.057 across seeds. Enough that a criterion landing within that band can't really be called either way.
+
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
 | 1.  |  |  |  |  |  |
@@ -266,11 +277,12 @@ Fine-tuning the model significantly increased accuracy on HIGH labeled items, no
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
-|---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| true \ predicted | LOW | MEDIUM | HIGH | CRITICAL |
+|---|---|---|---|---|
+| **LOW** | 3 | 11 | 4 | 0 |
+| **MEDIUM** | 2 | 162 | 32 | 2 |
+| **HIGH** | 0 | 55 | 125 | 13 |
+| **CRITICAL** | 3 | 14 | 33 | 18 |
 
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
