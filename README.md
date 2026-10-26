@@ -329,7 +329,7 @@ Accuracy moved 0.057 across seeds. Enough that a criterion landing within that b
 - *How I know:* CRITICAL has 455 examples (about 318 in training), far more than LOW. Yet recall is 0.26 / 0.49 / 0.41 and precision is 0.55 / 0.52 / 0.54, so about half of the CRITICAL predictions are wrong and about half of the real CRITICAL posts are missed. Of 68 true CRITICAL test posts, 33 / 28 / 26 (49% / 41% / 38%) were called HIGH, and 13 / 21 / 19 true HIGH posts were called CRITICAL. A label with this much data that stays near 0.4–0.5 F1 points at the boundary, not at the volume.
 - *Evidence the text under-determines the label:* my own hard cases 1–3. CVE-2026-5883 and CVE-2026-11068 use the same "execute arbitrary code inside a sandbox" wording as posts whose official severity differs, and "sandbox escape" appears in both HIGH and CRITICAL descriptions. Severity comes from the CVSS vector and score band (7.0–8.9 vs 9.0–10.0), which the description doesn't contain. My dataset also deliberately keeps identical descriptions that carry different official severities, which puts a ceiling on this boundary.
 - *Agreement report:* the 2 HIGH/CRITICAL disagreements (#4, the Firefox memory-safety post, and #6, the web midi use-after-free) were not resolved by the written rule (#6 was a rule gap; #4 turned on a hedge in the wording). Neither was a loose application of a clear rule.
-- *Instability:* seed 42 in my unit 5 `results.json` had a CRITICAL F1 of 0.057, while the three-seed run gives 0.356 on the same seed and the same test split. So CRITICAL is also sensitive to training setup, which is consistent with a model that hasn't settled on where to put this line.
+- *Training length, not randomness:* the Unit 5 held-out numbers I reported (CRITICAL F1 0.057 on seed 42) come from the 3-epoch run. The three-seed run uses 6 epochs, and the notebook's saved output for seed 42 shows CRITICAL F1 0.356 on the same split. So going from 3 to 6 epochs moved CRITICAL F1 by about 0.30, which means CRITICAL recall is sensitive to training length, and even the longer run leaves it below 0.55.
 
 **Diagnosis 3 — Criteria 2, 3, 4 (LOW): too few examples, and a small test split.**
 - *Cause:* LOW is my smallest label by a wide margin.
@@ -464,8 +464,10 @@ Overall: most of the disagreement sits on the MEDIUM/HIGH boundary. If a model s
 ## The Improvement
 
 **What I changed:**
+added 141 additional examples to the LOW label and retrained using the same model, learning rate, batch size, epoch count (6), data split strategy, and evaluation procedure. This was the only change between the before and after runs. The dataset grew from 3,175 rows to 3,316 rows, with all added rows belonging to LOW.
 
 **Which diagnosis pointed at it:**
+Diagnosis 3 pointed directly at LOW. LOW was my smallest class by far (117 examples total, only about 82 in training and 18 in test), and it had the largest seed-to-seed variation. The diagnosis concluded that data scarcity was the most likely reason LOW underperformed, so I followed the recommended improvement of adding more examples to the weakest label.
 
 ### Run Log — After
 
@@ -477,12 +479,58 @@ Overall: most of the disagreement sits on the MEDIUM/HIGH boundary. If a model s
 | 4.  |  |  |  |  |  |
 | 5.  |  |  |  |  |  |
 
+| Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
+|---|---|---|---|---|---|
+| 1.Overall accuracy | ≥ 0.75 on every seed | 0.629 | 0.6730 | .6540 | Missed | 
+| 2. Macro F1 | ≥ 0.70 on every seed | 	0.507 | 0.581 | 0.542 | Missed |
+| 3. Per-label F1  | every label ≥ 0.55 | LOW 0.298, CRITICAL 0.369 fail | LOW 0.455, CRITICAL 0.419 faill | LOW 0.345, CRITICAL 0.467 fail | Missed |
+| 4. F1 spread	 | best minus worst label F1 ≤ 0.25 | 0.427 | 0.347 | 0.382 | Missed |
+| 5. Confidence | predictions at ≥ 90% confidence correct ≥ 85% of the time | 0.908 | 0.907 | 0.909 | MET |
+
+
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.629 | 0.673 | 0.654 | 0.044 |
+| Macro F1 | 0.507 | 0.581 | 0.542 | 0.074 |
+| F1 — `LOW` | 0.298 | 0.455 | 0.341 | 0.157 |
+| F1 — `MEDIUM` | 0.725 | 0.766 | 0.730 | 0.041 |
+| F1 — `HIGH` | 0.636 | 0.685 | 0.678 | 0.049 |
+| F1 — `CRITICAL` | 0.369 | 0.419 | 0.417 | 0.050 |
+
+Accuracy moved 0.044 across seeds. That is slightly smaller than the 0.057 spread in the before run, suggesting the additional LOW examples reduced some seed sensitivity.
+
+| true \ predicted | LOW | MEDIUM | HIGH | CRITICAL |
+|---|---|---|---|---|
+| **LOW** | 7 | 7 | 4 | 0 |
+| **MEDIUM** | 12 | 149 | 35 | 2 |
+| **HIGH** | 7 | 47 | 125 | 14 |
+| **CRITICAL** | 3 | 10 | 36 | 19 |
+
+Biggest confusion: 47 real `HIGH` posts called `MEDIUM`.
+The other direction: 35 real `MEDIUM` posts called `HIGH`.
+
+Roughly symmetric — the model finds this pair hard in both directions,
+which more often means the boundary itself is genuinely hard.
+
+My biggest off-diagonal number, and what it means:
+ The largest confusion is 47 real HIGH posts predicted as MEDIUM. The opposite error also happens frequently, with 35 MEDIUM posts predicted as HIGH. The confusion is roughly symmetric, which suggests the model is struggling with a genuinely difficult boundary rather than systematically preferring one label over the other. Even after adding more LOW data, the MEDIUM/HIGH boundary remains the dominant source of error.
+
 **Did it help, and how do I know:**
 
 <!-- If it didn't, say so. Relabelling that didn't help is a genuinely
      interesting result and earns full credit. -->
+Yes, but only for the label I targeted.
+LOW F1 improved on every seed:
 
+Seed 42: 0.231 → 0.298 (+0.067)
+Seed 7: 0.467 → 0.455 (-0.012)
+Seed 2024: 0.345 → 0.341 (-0.004)
 
+The most meaningful improvement is visible in recall. For seed 42, correct LOW predictions increased from 3 of 18 to 7 of 18. The confusion matrix shows that fewer LOW examples were absorbed into MEDIUM after adding the extra data.
+
+The overall picture is mixed. Macro F1 increased slightly for seed 42 (0.492 → 0.507) but decreased for seeds 7 and 2024. Accuracy also decreased slightly on all three seeds. The change therefore improved the model's ability to recognize LOW posts but did not improve the model overall.
+
+Overall, the experiment supports the diagnosis that LOW suffers partly from limited training data. However, adding examples to LOW did not address the larger MEDIUM/HIGH and HIGH/CRITICAL boundary problems that dominate the remaining errors.
 
 ---
 

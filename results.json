@@ -60,7 +60,9 @@
     "mean_when_wrong": 0.6951155066490173,
     "accuracy_most_confident_third": 0.8679245283018868,
     "accuracy_least_confident_third": 0.4339622641509434,
-    "n_per_third": 159
+    "n_per_third": 159,
+    "n_at_or_above_0.90": 167,
+    "accuracy_at_or_above_0.90": 0.8682634730538922
   },
   "device": "cuda",
   "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",

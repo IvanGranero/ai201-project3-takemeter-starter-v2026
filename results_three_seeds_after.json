@@ -1,0 +1,218 @@
+[
+  {
+    "seed": 42,
+    "n_test": 477,
+    "accuracy": 0.6289308176100629,
+    "f1_macro": 0.50699938050818,
+    "per_label": {
+      "LOW": {
+        "precision": 0.2413793103448276,
+        "recall": 0.3888888888888889,
+        "f1": 0.2978723404255319,
+        "support": 18
+      },
+      "MEDIUM": {
+        "precision": 0.6995305164319249,
+        "recall": 0.7525252525252525,
+        "f1": 0.7250608272506083,
+        "support": 198
+      },
+      "HIGH": {
+        "precision": 0.625,
+        "recall": 0.6476683937823834,
+        "f1": 0.6361323155216285,
+        "support": 193
+      },
+      "CRITICAL": {
+        "precision": 0.5428571428571428,
+        "recall": 0.27941176470588236,
+        "f1": 0.36893203883495146,
+        "support": 68
+      }
+    },
+    "confusion": {
+      "LOW": {
+        "LOW": 7,
+        "MEDIUM": 7,
+        "HIGH": 4,
+        "CRITICAL": 0
+      },
+      "MEDIUM": {
+        "LOW": 12,
+        "MEDIUM": 149,
+        "HIGH": 35,
+        "CRITICAL": 2
+      },
+      "HIGH": {
+        "LOW": 7,
+        "MEDIUM": 47,
+        "HIGH": 125,
+        "CRITICAL": 14
+      },
+      "CRITICAL": {
+        "LOW": 3,
+        "MEDIUM": 10,
+        "HIGH": 36,
+        "CRITICAL": 19
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.8134132027626038,
+      "mean_when_wrong": 0.6659803986549377,
+      "accuracy_most_confident_third": 0.8930817610062893,
+      "accuracy_least_confident_third": 0.39622641509433965,
+      "n_per_third": 159,
+      "n_at_or_above_0.90": 152,
+      "accuracy_at_or_above_0.90": 0.9078947368421053
+    },
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch_version": "2.14.1+cu130",
+    "max_length": 128,
+    "extra_rows": 141
+  },
+  {
+    "seed": 7,
+    "n_test": 477,
+    "accuracy": 0.6729559748427673,
+    "f1_macro": 0.5812764175860564,
+    "per_label": {
+      "LOW": {
+        "precision": 0.38461538461538464,
+        "recall": 0.5555555555555556,
+        "f1": 0.45454545454545453,
+        "support": 18
+      },
+      "MEDIUM": {
+        "precision": 0.7801047120418848,
+        "recall": 0.7525252525252525,
+        "f1": 0.7660668380462725,
+        "support": 198
+      },
+      "HIGH": {
+        "precision": 0.6666666666666666,
+        "recall": 0.7046632124352331,
+        "f1": 0.6851385390428212,
+        "support": 193
+      },
+      "CRITICAL": {
+        "precision": 0.4642857142857143,
+        "recall": 0.38235294117647056,
+        "f1": 0.41935483870967744,
+        "support": 68
+      }
+    },
+    "confusion": {
+      "LOW": {
+        "LOW": 10,
+        "MEDIUM": 4,
+        "HIGH": 2,
+        "CRITICAL": 2
+      },
+      "MEDIUM": {
+        "LOW": 10,
+        "MEDIUM": 149,
+        "HIGH": 33,
+        "CRITICAL": 6
+      },
+      "HIGH": {
+        "LOW": 5,
+        "MEDIUM": 30,
+        "HIGH": 136,
+        "CRITICAL": 22
+      },
+      "CRITICAL": {
+        "LOW": 1,
+        "MEDIUM": 8,
+        "HIGH": 33,
+        "CRITICAL": 26
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.8344857096672058,
+      "mean_when_wrong": 0.6621474027633667,
+      "accuracy_most_confident_third": 0.9308176100628931,
+      "accuracy_least_confident_third": 0.41509433962264153,
+      "n_per_third": 159,
+      "n_at_or_above_0.90": 182,
+      "accuracy_at_or_above_0.90": 0.9065934065934066
+    },
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch_version": "2.14.1+cu130",
+    "max_length": 128,
+    "extra_rows": 141
+  },
+  {
+    "seed": 2024,
+    "n_test": 477,
+    "accuracy": 0.6540880503144654,
+    "f1_macro": 0.5418116696952419,
+    "per_label": {
+      "LOW": {
+        "precision": 0.30434782608695654,
+        "recall": 0.3888888888888889,
+        "f1": 0.34146341463414637,
+        "support": 18
+      },
+      "MEDIUM": {
+        "precision": 0.7227722772277227,
+        "recall": 0.7373737373737373,
+        "f1": 0.73,
+        "support": 198
+      },
+      "HIGH": {
+        "precision": 0.6585365853658537,
+        "recall": 0.6994818652849741,
+        "f1": 0.678391959798995,
+        "support": 193
+      },
+      "CRITICAL": {
+        "precision": 0.5106382978723404,
+        "recall": 0.35294117647058826,
+        "f1": 0.41739130434782606,
+        "support": 68
+      }
+    },
+    "confusion": {
+      "LOW": {
+        "LOW": 7,
+        "MEDIUM": 8,
+        "HIGH": 2,
+        "CRITICAL": 1
+      },
+      "MEDIUM": {
+        "LOW": 8,
+        "MEDIUM": 146,
+        "HIGH": 37,
+        "CRITICAL": 7
+      },
+      "HIGH": {
+        "LOW": 5,
+        "MEDIUM": 38,
+        "HIGH": 135,
+        "CRITICAL": 15
+      },
+      "CRITICAL": {
+        "LOW": 3,
+        "MEDIUM": 10,
+        "HIGH": 31,
+        "CRITICAL": 24
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.8081719279289246,
+      "mean_when_wrong": 0.6537518501281738,
+      "accuracy_most_confident_third": 0.89937106918239,
+      "accuracy_least_confident_third": 0.42138364779874216,
+      "n_per_third": 159,
+      "n_at_or_above_0.90": 139,
+      "accuracy_at_or_above_0.90": 0.9136690647482014
+    },
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch_version": "2.14.1+cu130",
+    "max_length": 128,
+    "extra_rows": 141
+  }
+]
