@@ -266,11 +266,11 @@ Accuracy moved 0.057 across seeds. Enough that a criterion landing within that b
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1.Overall accuracy | ≥ 0.75 on every seed | 0.646 | 0.702 | 0.660 | Missed |
+| 2. Macro F1 | ≥ 0.70 on every seed | 	0.492 | 0.614 | 0.553 | Missed |
+| 3. Per-label F1  | every label ≥ 0.55 | LOW 0.231, CRITICAL 0.356 fail | LOW 0.467, CRITICAL 0.504 fail | LOW 0.345, CRITICAL 0.467 fail | Missed |
+| 4. F1 spread	 | best minus worst label F1 ≤ 0.25 | 0.505 | 0.317 | 0.382 | Missed |
+| 5. Confidence | predictions at ≥ 90% confidence correct ≥ 85% of the time | not measurable (top-third proxy 0.868) | not measurable (top-third proxy 0.931) | not measurable (top-third proxy 0.893) | Unverified |
 
 ### Confusion matrix
 
@@ -300,11 +300,11 @@ Accuracy moved 0.057 across seeds. Enough that a criterion landing within that b
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Overall accuracy | ≥ 0.75 on every seed | **MISSED** | 0.646 / 0.702 / 0.660. All three seeds are below target. The best seed is 0.048 short and the mean (0.669) is 0.081 short, which is more than the 0.057 seed spread, so this is not seed luck. |
+| 2 | Macro F1 | ≥ 0.70 on every seed | **MISSED** | 0.492 / 0.614 / 0.553. No seed reaches 0.70. The best is 0.086 short and the mean (0.553) is 0.147 short. The seed spread (0.121) is larger than the best seed's gap, so macro F1 is the criterion where seed luck matters most, but the target has to hold on all three seeds and none gets there. |
+| 3 | Per-label F1 | every label ≥ 0.55 on every seed | **MISSED** | MEDIUM (0.727–0.783) and HIGH (0.646–0.702) pass on every seed. LOW (0.231 / 0.467 / 0.345) and CRITICAL (0.356 / 0.504 / 0.467) fail on every seed. Their best scores, 0.467 and 0.504, are still under 0.55. |
+| 4 | F1 spread | best label F1 minus worst ≤ 0.25 | **MISSED** | Spread is 0.505 / 0.317 / 0.382. The best label is MEDIUM and the worst is LOW on all three seeds. Even if LOW were lifted to 0.55, CRITICAL becomes the floor and the spread is still 0.380 / 0.279 / 0.260, so this criterion also needs CRITICAL to improve. |
+| 5 | Confidence | predictions at ≥ 90% confidence are correct ≥ 85% of the time | **UNVERIFIED** (not MET) | My evaluation saved accuracy by confidence *third* (159 posts each), not at a 0.90 threshold: 0.868 / 0.931 / 0.893. Those clear 0.85, but the top third is not the set of predictions at ≥ 0.90, so I can't call it MET. This is a gap in what I measured, not a missed number. |
 
 **Diagnoses**
 
@@ -316,6 +316,34 @@ Accuracy moved 0.057 across seeds. Enough that a criterion landing within that b
      ⚠️ Use your agreement report as evidence. It is the only instrument you
      have that can tell a LABELLING problem from a MODEL problem, and this
      section is graded on whether you used it that way. -->
+
+**How my labels were made changes what a diagnosis can say.** My 3,175 labels are the CVSS `baseSeverity` copied from each CVE record. I did not label them by reading, so "I applied my own boundary two different ways in the training data" is not a cause available to me in the usual sense: the labels follow one fixed rule. The question for each miss is different: can that label be predicted from the description text alone (the model sees 128 tokens)? My own hardest-boundary rule already admits that for HIGH vs CRITICAL it cannot always be: "the description alone does not decide this boundary."
+
+**Diagnosis 1 — Criterion 1 (accuracy): MEDIUM vs HIGH is a genuinely hard pair.**
+- *Cause:* the model keeps swapping MEDIUM and HIGH, and the text often doesn't say which one a record got.
+- *How I know:* the two biggest off-diagonal cells in the confusion matrices are HIGH→MEDIUM (55 / 37 / 40) and MEDIUM→HIGH (32 / 26 / 41) for seeds 42 / 7 / 2024. Together they are 87, 63 and 81 posts, which is 51%, 44% and 50% of all errors. Both labels have plenty of data (1,319 MEDIUM, 1,284 HIGH) and both pass criterion 3, so this is not a data-volume problem.
+- *Agreement report:* 5 of my 7 disagreements were on this pair (#1, #2, #3, #5, #7). Two were pile (a): I pushed an out-of-bounds read from MEDIUM to HIGH by using knowledge that isn't in the post. Three were pile (b) or (c) with no clear winner under the written rule (#3 was a win for me, #5 and #7 were gaps in the rule). So a careful reader with a written rule also splits on this boundary.
+
+**Diagnosis 2 — Criteria 2, 3, 4 (CRITICAL): HIGH vs CRITICAL is a hard pair that the description doesn't decide.**
+- *Cause:* CRITICAL is neither too small nor ignored by the model; it is confused with HIGH in both directions.
+- *How I know:* CRITICAL has 455 examples (about 318 in training), far more than LOW. Yet recall is 0.26 / 0.49 / 0.41 and precision is 0.55 / 0.52 / 0.54, so about half of the CRITICAL predictions are wrong and about half of the real CRITICAL posts are missed. Of 68 true CRITICAL test posts, 33 / 28 / 26 (49% / 41% / 38%) were called HIGH, and 13 / 21 / 19 true HIGH posts were called CRITICAL. A label with this much data that stays near 0.4–0.5 F1 points at the boundary, not at the volume.
+- *Evidence the text under-determines the label:* my own hard cases 1–3. CVE-2026-5883 and CVE-2026-11068 use the same "execute arbitrary code inside a sandbox" wording as posts whose official severity differs, and "sandbox escape" appears in both HIGH and CRITICAL descriptions. Severity comes from the CVSS vector and score band (7.0–8.9 vs 9.0–10.0), which the description doesn't contain. My dataset also deliberately keeps identical descriptions that carry different official severities, which puts a ceiling on this boundary.
+- *Agreement report:* the 2 HIGH/CRITICAL disagreements (#4, the Firefox memory-safety post, and #6, the web midi use-after-free) were not resolved by the written rule (#6 was a rule gap; #4 turned on a hedge in the wording). Neither was a loose application of a clear rule.
+- *Instability:* seed 42 in my unit 5 `results.json` had a CRITICAL F1 of 0.057, while the three-seed run gives 0.356 on the same seed and the same test split. So CRITICAL is also sensitive to training setup, which is consistent with a model that hasn't settled on where to put this line.
+
+**Diagnosis 3 — Criteria 2, 3, 4 (LOW): too few examples, and a small test split.**
+- *Cause:* LOW is my smallest label by a wide margin.
+- *How I know:* 117 examples in total (3.7%), about 82 in training and only 18 in the test split. LOW recall is 3/18, 7/18 and 5/18, and 11 / 8 / 11 of the LOW posts were called MEDIUM. LOW F1 has the biggest seed-to-seed swing in the table (0.231 to 0.467, spread 0.236), and one LOW post changes its recall by 0.056, so a single seed says very little about LOW.
+- *Not hopeless:* both of my chosen LOW examples contain a precondition cue ("a remote attacker who had compromised the renderer process"), so some of LOW is learnable from text. That suggests more LOW signal could be recovered with weighting or more data rather than being impossible.
+- *Agreement report:* the staff set had no LOW posts, so it tells me nothing about LOW.
+
+**Diagnosis 4 — Criterion 5 (confidence): a measurement gap, not a model failure.**
+- *Cause:* my evaluation output reports accuracy by confidence third, not predictions at ≥ 0.90.
+- *How I know:* the top-third accuracies (0.868 / 0.931 / 0.893) clear 0.85, and the least confident third is correct only 43% / 57% / 46% of the time, so confidence does rank predictions usefully. But the model is overconfident: mean confidence when right is about 0.83 and when wrong about 0.70–0.74. I cannot say whether the ≥ 0.90 set meets 0.85 until I save each prediction's top probability. I am leaving the criterion as written. It is measurable, I just haven't measured it yet.
+
+**What the agreement report can and can't tell me here.** It can't detect noise in the CVSS-derived labels, because the staff and I both labelled from text. What it does show is that a careful text-only reader using written rules splits on exactly the boundaries where the model confuses most (5 of 7 on MEDIUM/HIGH, 2 of 7 on HIGH/CRITICAL, and 3 of 7 could not be settled by the rules at all). That makes this look more like hard label pairs than a weak model. The two pile (a) misses show a habit of mine (using outside knowledge to push a label up), but it does not touch the training labels, since I didn't write those. Caveat: the staff rubric and staff labels in this check were simulated, and I had already seen the CVSS labels when I labelled the 30 posts, so 77% is not a clean measurement and I use it only as evidence about where text-only rules break down.
+
+**What I haven't tested.** I haven't ruled out truncation (`max_length` 128) as part of the HIGH/CRITICAL problem, and I haven't counted how many identical descriptions carry different severities, which would give a floor on the error that no model could beat. Both checks are cheap and decide whether my next change should target the model (class weights for LOW and CRITICAL, longer inputs) or accept a ceiling set by the labels.
 
 
 
